@@ -134,6 +134,27 @@ textarea{min-height:90px;resize:vertical}
 form .btn{justify-self:start;cursor:pointer}
 #formmsg{font-weight:700;color:var(--todo)}
 
+/* business extras: borrowed from the old site */
+:root{--cherry:#de3f4b}
+.ticker{background:var(--cherry);color:#fff;border-bottom:var(--border);overflow:hidden;white-space:nowrap;font-family:var(--f-label);font-size:1.9rem;line-height:1;padding-block:12px 10px}
+.ticker .track{display:inline-flex;gap:48px;padding-inline-start:24px;animation:tick 28s linear infinite}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(50%)}}
+.floaty{overflow:visible}
+.floaty img{width:100%}
+.tag{position:absolute;background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:5px 12px;font-weight:700;font-size:.9rem;box-shadow:3px 3px 0 var(--ink);white-space:nowrap}
+.tag.t1{top:22%;inset-inline-end:-8px;background:var(--cherry);color:#fff}
+.tag.t2{top:52%;inset-inline-start:-8px;background:var(--sun)}
+.tag.t3{bottom:10%;inset-inline-end:10%}
+.flow h3,.spec h3,form h3{font-size:1.6rem;margin-bottom:12px}
+.process{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:p}
+.process li{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:baseline}
+.process li::before{counter-increment:p;content:counter(p);grid-row:span 2;font-family:var(--f-label);font-size:1.5rem;width:1.6em;height:1.6em;display:grid;place-items:center;border-radius:999px;background:var(--sun);color:var(--ink);line-height:1}
+.process span{color:var(--kraft)}
+.specs{display:grid;gap:18px;margin-block:32px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.spec{border:3px solid var(--paper);border-radius:18px;padding:18px 20px;min-width:0}
+.spec ul{margin:0;padding-inline-start:20px;display:grid;gap:6px}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}}
+
 /* story */
 .story .in.cols{display:grid;gap:28px}
 @media (min-width:820px){.story .in.cols{grid-template-columns:.8fr 1.2fr;align-items:center}}
@@ -280,33 +301,71 @@ footer small{color:var(--kraft)}
   </div>
 </section>
 
+<div class="ticker" aria-hidden="true"><div class="track"><span>הקפה שלכם. המותג שלכם. הביצוע שלנו. ☕</span><span>אצלכם תוך 10 ימי עסקים ☕</span><span>הקפה שלכם. המותג שלכם. הביצוע שלנו. ☕</span><span>אצלכם תוך 10 ימי עסקים ☕</span><span>הקפה שלכם. המותג שלכם. הביצוע שלנו. ☕</span><span>אצלכם תוך 10 ימי עסקים ☕</span></div></div>
+
 <section id="biz" class="biz">
   <div class="in">
     <div class="head">
-      <h2>דריפ באגז עם השם שלכם</h2>
-      <p>אנחנו ממלאים, אורזים וממתגים דריפ באגז לעסקים. השקית נושאת את השם שלכם, הקפה הוא שלנו.</p>
+      <h2>הקפה שלכם. המותג שלכם. הביצוע שלנו.</h2>
+      <p>אנחנו הופכים את הקפה שלכם למותג שאנשים לוקחים הביתה. לבתי קפה, לבתי קלייה ולעסקים שרוצים דריפ באגז עם השם שלהם.</p>
     </div>
     <div class="cols">
       <div>
-        <div class="ph"><span class="todo pin">צילום אמיתי של הזמנה ממותגת</span><img src="img/shelf.jpg" alt="מדפים עם דריפ באגז בצבעים שונים"></div>
+        <div class="ph floaty">
+          <span class="todo pin">להחליף בתמונות השקיות הצבעוניות</span>
+          <img src="img/shelf.jpg" alt="מדפים עם דריפ באגז בצבעים שונים">
+          <span class="tag t1">אצלכם תוך 10 ימי עסקים</span>
+          <span class="tag t2">10 צבעי אריזה</span>
+          <span class="tag t3">המדבקה שלכם</span>
+        </div>
         <div class="proof"><b>4,500</b><span>שקיות ממותגות שהכנו ל־Wix, למטבחונים שלהם.</span></div>
         <p>מתאים ל:</p>
-        <ul class="fits"><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li><li>אירועים</li></ul>
-        <p style="margin-top:14px"><span class="todo">מינימום הזמנה וזמני אספקה</span></p>
+        <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li></ul>
       </div>
-      <form id="bizform" novalidate>
-        <h3>ספרו לנו מה צריך</h3>
-        <div class="f2">
-          <label for="b-name">שם<input id="b-name" name="name" autocomplete="name"></label>
-          <label for="b-biz">עסק<input id="b-biz" name="biz" autocomplete="organization"></label>
-          <label for="b-phone">טלפון<input id="b-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
-          <label for="b-qty">כמה שקיות, בערך<select id="b-qty" name="qty"><option>עוד לא יודע</option><option>עד 500</option><option>500 עד 2,000</option><option>מעל 2,000</option></select></label>
-        </div>
-        <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: לוגו על השקית, אירוע בתאריך מסוים"></textarea></label>
-        <button class="btn" type="submit">שליחה</button>
-        <p id="formmsg" aria-live="polite"></p>
-      </form>
+      <div class="flow">
+        <h3>איך זה עובד</h3>
+        <ol class="process">
+          <li><b>שולחים לנו קפה</b><span>פולים או טחון.</span></li>
+          <li><b>מאשרים מדבקה</b><span>רואים ומאשרים את התווית לפני שמדפיסים.</span></li>
+          <li><b>ייצור</b><span>בערך 2 עד 5 ימים, לפי הכמות.</span></li>
+          <li><b>בוחרים משלוח</b><span>מחליטים איך הארגזים מגיעים אליכם.</span></li>
+          <li><b>מקבלים</b><span>אצלכם תוך 10 ימי עסקים.</span></li>
+        </ol>
+      </div>
     </div>
+    <div class="specs">
+      <div class="spec">
+        <h3>על האריזה</h3>
+        <ul>
+          <li>10 צבעי קופסה לבחירה</li>
+          <li>הדפסה תרמית בשחור</li>
+          <li>מדבקה בשני גדלים: 5×5 או 10×5 ס״מ</li>
+          <li>6 עד 7 צבעי מדבקה</li>
+        </ul>
+      </div>
+      <div class="spec">
+        <h3>על הקפה</h3>
+        <ul>
+          <li>טחינה במטחנת Compak PK100</li>
+          <li>גודל טחינה של בערך 350 מיקרון, אפשר לכוונן</li>
+          <li>שקית סטנדרטית של 12 גרם, אפשר בין 8 ל־14</li>
+          <li>בערך 80 שקיות מכל קילו קפה</li>
+        </ul>
+      </div>
+    </div>
+    <form id="bizform" novalidate>
+      <h3>ספרו לנו מה צריך</h3>
+      <div class="f2">
+        <label for="b-name">שם<input id="b-name" name="name" autocomplete="name"></label>
+        <label for="b-biz">עסק<input id="b-biz" name="biz" autocomplete="organization"></label>
+        <label for="b-phone">טלפון<input id="b-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
+        <label for="b-qty">כמה שקיות, בערך<select id="b-qty" name="qty"><option>עוד לא יודע</option><option>עד 500</option><option>500 עד 2,000</option><option>מעל 2,000</option></select></label>
+      </div>
+      <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: הקפה שלנו, צבע אריזה, תאריך"></textarea></label>
+      <button class="btn" type="submit">שליחה</button>
+      <p id="formmsg" aria-live="polite"></p>
+    </form>
+    <p style="margin-top:18px"><span class="todo">מינימום הזמנה ומחירים לעסקים</span></p>
   </div>
 </section>
 
