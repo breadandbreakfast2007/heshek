@@ -29,7 +29,7 @@ LAYOUT='''<!doctype html>
     <nav aria-label="ראשי">{nav}</nav>
     <div class="hdr-end">
       <button class="cart" id="cart" type="button" aria-label="סל">סל <span id="count">0</span></button>
-      <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.png" alt="חשק, חברה של קפה"></a>
+      <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     </div>
   </div>
   <div id="mnav" hidden><div class="in">{nav}</div></div>
@@ -41,7 +41,7 @@ LAYOUT='''<!doctype html>
 
 <footer>
   <div class="in">
-    <a class="logo" href="index.html"><img src="img/logo.png" alt="חשק, חברה של קפה"></a>
+    <a class="logo" href="index.html"><img src="img/logo-light.svg" alt="חשק, חברה של קפה"></a>
     <nav aria-label="תחתון">{fnav}<a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
     <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
   </div>

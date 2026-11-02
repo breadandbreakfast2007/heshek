@@ -160,7 +160,7 @@ form .btn{justify-self:start;cursor:pointer}
 
 footer{background:var(--ink);color:var(--paper)}
 footer .in{display:grid;gap:18px;padding-block:32px}
-footer .logo img{height:54px;filter:brightness(0) invert(.96) sepia(.2)}
+footer .logo img{height:54px}
 footer nav{display:flex;flex-wrap:wrap;gap:16px;margin:0}
 footer small{color:var(--kraft)}
 
