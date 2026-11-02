@@ -18,11 +18,13 @@
 
 <header>
   <div class="in">
-    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">תפריט</button>
-    <nav aria-label="ראשי"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a></nav>
+    <div class="hdr-start">
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="תפריט"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></button>
+      <nav aria-label="ראשי"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a></nav>
+    </div>
+    <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     <div class="hdr-end">
-      <button class="cart" id="cart" type="button" aria-label="סל">סל <span id="count">0</span></button>
-      <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
+      <button class="cart" id="cart" type="button" aria-label="סל קניות"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span id="count" class="badge">0</span></button>
     </div>
   </div>
   <div id="mnav" hidden><div class="in"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a></div></div>
@@ -50,30 +52,50 @@
 <section id="shop">
   <div class="in">
     <div class="head">
-      <h2>מה יש עכשיו</h2>
-      <p>מתחילים מדריפ באגז. קפה במשקל ועוד דברים טובים מגיעים בהמשך.</p>
+      <h2>קפה</h2>
+      <p>מתחילים מדריפ באגז. פולים ועוד דברים טובים יגיעו בהמשך, כל אחד בקטגוריה משלו.</p>
     </div>
     <div class="grid rail">
       <article class="card">
-        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/kraft-indonesia.jpg" alt="דריפ באגז אינדונזיה"></div>
+        <div class="ph"><img src="img/products/indonesia.jpg" alt="דריפ באגז Indonesia" loading="lazy"></div>
         <div class="body">
           <span class="kind">דריפ באגז</span>
-          <h3>Indonesia</h3>
-          <span class="todo">מקור, קלייה, טעמים, יחידות באריזה</span>
+          <h3><a href="product.html">Indonesia</a></h3>
+          <span class="todo">טעמים, יחידות באריזה</span>
           <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
         </div>
       </article>
       <article class="card">
-        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/house-blend.jpg" alt="דריפ באגז האוס בלנד"></div>
+        <div class="ph"><img src="img/products/colombia.jpg" alt="דריפ באגז Colombia" loading="lazy"></div>
+        <div class="body">
+          <span class="kind">דריפ באגז</span>
+          <h3>Colombia</h3>
+          <p class="sub">Huila San Agustín · Washed</p>
+          <span class="todo">טעמים, יחידות באריזה</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="img/products/decaf.jpg" alt="דריפ באגז Decaf" loading="lazy"></div>
+        <div class="body">
+          <span class="kind">דריפ באגז</span>
+          <h3>Decaf</h3>
+          <p class="sub">Colombia Tumbaga · Sugarcane</p>
+          <span class="todo">טעמים, יחידות באריזה</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="img/products/house-blend.jpg" alt="דריפ באגז House Blend" loading="lazy"></div>
         <div class="body">
           <span class="kind">דריפ באגז</span>
           <h3>House Blend</h3>
-          <span class="todo">מקור, קלייה, טעמים, יחידות באריזה</span>
+          <span class="todo">טעמים, יחידות באריזה</span>
           <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
         </div>
       </article>
       <article class="card">
-        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/turkish.jpg" alt="קפה טורקי קלוי וטחון"></div>
+        <div class="ph"><span class="todo pin">צילום מוצר</span><img src="img/turkish.jpg" alt="קפה טורקי קלוי וטחון" loading="lazy"></div>
         <div class="body">
           <span class="kind">קפה טורקי</span>
           <h3>קלוי וטחון</h3>
@@ -86,7 +108,7 @@
         <div class="body">
           <span class="kind">בקרוב</span>
           <h3>מארז טעימות</h3>
-          <p>דריפ באגז מבתי קלייה שונים בארץ, במקום עשר שקיות פולים.</p>
+          <p class="sub">דריפ באגז מבתי קלייה שונים בארץ, במקום עשר שקיות פולים.</p>
           <div class="row"><span class="price">בקרוב</span><button class="add" type="button" data-soon>עדכנו אותי</button></div>
         </div>
       </article>
@@ -142,8 +164,7 @@
     </div>
     <div class="cols">
       <div><div class="ph floaty">
-          <span class="todo pin">להחליף בתמונות השקיות הצבעוניות</span>
-          <img src="img/shelf.jpg" alt="מדפים עם דריפ באגז בצבעים שונים">
+          <img src="img/tray.jpg" alt="מגש עם דריפ באגז בכתום, שחור, קראפט ואדום">
           <span class="tag t1">אצלכם תוך 10 ימי עסקים</span>
           <span class="tag t2">10 צבעי אריזה</span>
           <span class="tag t3">המדבקה שלכם</span>

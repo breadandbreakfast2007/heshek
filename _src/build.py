@@ -25,11 +25,13 @@ LAYOUT='''<!doctype html>
 
 <header>
   <div class="in">
-    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">תפריט</button>
-    <nav aria-label="ראשי">{nav}</nav>
+    <div class="hdr-start">
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="תפריט"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></button>
+      <nav aria-label="ראשי">{nav}</nav>
+    </div>
+    <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     <div class="hdr-end">
-      <button class="cart" id="cart" type="button" aria-label="סל">סל <span id="count">0</span></button>
-      <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
+      <button class="cart" id="cart" type="button" aria-label="סל קניות"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span id="count" class="badge">0</span></button>
     </div>
   </div>
   <div id="mnav" hidden><div class="in">{nav}</div></div>
@@ -65,7 +67,7 @@ shop=part('shop')
 cards=re.findall(r'<article class="card.*?</article>',shop,re.S)
 # product links
 cards[0]=cards[0].replace('<h3>Indonesia</h3>','<h3><a href="product.html">Indonesia</a></h3>')
-cats=['drip','drip','coffee','soon']
+cats=['drip','drip','drip','drip','ground','soon']
 cards_c=[c.replace('<article class="card','<article data-cat="%s" class="card'%k,1) for c,k in zip(cards,cats)]
 how=part('how'); where=part('where'); biz=part('biz'); story=part('story'); insta=part('insta')
 
@@ -111,14 +113,14 @@ page('index.html','חשק, חברה של קפה','דריפ באגז של חשק.
 # ---------- shop ----------
 page('shop.html','חנות | חשק','דריפ באגז, קפה ומארזים של חשק.','''<div class="pagehead sun"><div class="in">
   <div class="label">חנות</div>
-  <h1>כל מה שיש עכשיו</h1>
-  <p>מתחילים מדריפ באגז. קפה במשקל, כוסות ומארזים מגיעים בהדרגה.</p>
+  <h1>קפה</h1>
+  <p>דריפ באגז וקפה טורקי. פולים, כוסות ומארזים יגיעו בהמשך, כל אחד בקטגוריה משלו.</p>
 </div></div>
 <section><div class="in">
   <div class="chips" role="group" aria-label="סינון">
     <button class="chip" type="button" data-filter="all" aria-pressed="true">הכול</button>
     <button class="chip" type="button" data-filter="drip" aria-pressed="false">דריפ באגז</button>
-    <button class="chip" type="button" data-filter="coffee" aria-pressed="false">קפה</button>
+    <button class="chip" type="button" data-filter="ground" aria-pressed="false">קפה טורקי</button>
     <button class="chip" type="button" data-filter="soon" aria-pressed="false">בקרוב</button>
   </div>
   <div class="grid">
@@ -132,7 +134,7 @@ page('product.html','Indonesia | חשק','דריפ באגז Indonesia של חש�
   <p class="crumbs"><a href="shop.html">חנות</a> / דריפ באגז / Indonesia</p>
   <div class="product" style="margin-top:16px">
     <div class="gallery">
-      <div class="main"><span class="todo pin">צילום מוצר נקי</span><img src="img/kraft-indonesia.jpg" alt="דריפ באגז Indonesia"></div>
+      <div class="main"><img src="img/products/indonesia.jpg" alt="דריפ באגז Indonesia"></div>
       <img class="thumb" src="img/hang.jpg" alt="השקית תלויה על כוס">
       <img class="thumb" src="img/pour.jpg" alt="מוזגים מים">
       <img class="thumb" src="img/hand-bag.jpg" alt="השקית ביד">

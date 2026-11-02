@@ -3,10 +3,10 @@
   if(btn&&nav){
     btn.addEventListener('click',function(){var open=nav.hidden;nav.hidden=!open;btn.setAttribute('aria-expanded',String(open));});
   }
-  var n=0,count=document.getElementById('count');
+  var n=0,count=document.getElementById('count');if(count)count.setAttribute('data-zero','');
   document.querySelectorAll('.add').forEach(function(b){b.addEventListener('click',function(){
     if(b.hasAttribute('data-soon')){b.textContent='נעדכן אותך';b.disabled=true;return;}
-    n+=parseInt((document.getElementById('qty')||{}).value||1,10)||1;if(count)count.textContent=n;
+    n+=parseInt((document.getElementById('qty')||{}).value||1,10)||1;if(count){count.textContent=n;count.removeAttribute('data-zero');}
     var t=b.textContent;b.textContent='נוסף ✓';setTimeout(function(){b.textContent=t;},1200);
   });});
   var f=document.getElementById('bizform');
@@ -25,7 +25,7 @@
 })();
 (function(){
   if(!('IntersectionObserver' in window))return;
-  var els=document.querySelectorAll('section .head, section .card, section .step, .strip figure, .ig img, .prose, blockquote, .spec, .process li, .tip, .faq details, .places');
+  var els=document.querySelectorAll('section .prose, section blockquote');
   document.documentElement.classList.add('js');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el){el.classList.add('reveal');io.observe(el);});
