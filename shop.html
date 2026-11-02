@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>חנות | חשק</title>
+<meta name="description" content="דריפ באגז, קפה ומארזים של חשק.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700&family=Karantina:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="draftbar"><div class="in">טיוטה לעיון. מה שמסומן ב<span class="todo" style="font-size:.75rem">להחלפה</span> מחכה לחומרים או לפרטים.</div></div>
+
+<header>
+  <div class="in">
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">תפריט</button>
+    <nav aria-label="ראשי"><a href="shop.html" aria-current="page">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a></nav>
+    <div class="hdr-end">
+      <button class="cart" id="cart" type="button" aria-label="סל">סל <span id="count">0</span></button>
+      <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.png" alt="חשק, חברה של קפה"></a>
+    </div>
+  </div>
+  <div id="mnav" hidden><div class="in"><a href="shop.html" aria-current="page">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a></div></div>
+</header>
+
+<main id="top">
+<div class="pagehead sun"><div class="in">
+  <div class="label">חנות</div>
+  <h1>כל מה שיש עכשיו</h1>
+  <p>מתחילים מדריפ באגז. קפה במשקל, כוסות ומארזים מגיעים בהדרגה.</p>
+</div></div>
+<section><div class="in">
+  <div class="chips" role="group" aria-label="סינון">
+    <button class="chip" type="button" data-filter="all" aria-pressed="true">הכול</button>
+    <button class="chip" type="button" data-filter="drip" aria-pressed="false">דריפ באגז</button>
+    <button class="chip" type="button" data-filter="coffee" aria-pressed="false">קפה</button>
+    <button class="chip" type="button" data-filter="soon" aria-pressed="false">בקרוב</button>
+  </div>
+  <div class="grid">
+<article data-cat="drip" class="card">
+        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/kraft-indonesia.jpg" alt="דריפ באגז אינדונזיה"></div>
+        <div class="body">
+          <span class="kind">דריפ באגז</span>
+          <h3><a href="product.html">Indonesia</a></h3>
+          <span class="todo">מקור, קלייה, טעמים, יחידות באריזה</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+<article data-cat="drip" class="card">
+        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/house-blend.jpg" alt="דריפ באגז האוס בלנד"></div>
+        <div class="body">
+          <span class="kind">דריפ באגז</span>
+          <h3>House Blend</h3>
+          <span class="todo">מקור, קלייה, טעמים, יחידות באריזה</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+<article data-cat="coffee" class="card">
+        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/turkish.jpg" alt="קפה טורקי קלוי וטחון"></div>
+        <div class="body">
+          <span class="kind">קפה טורקי</span>
+          <h3>קלוי וטחון</h3>
+          <span class="todo">משקל וטעמים</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+<article data-cat="soon" class="card soon">
+        <div class="ph"><div class="soon-art">10<small>קולים. קופסה אחת.</small></div></div>
+        <div class="body">
+          <span class="kind">בקרוב</span>
+          <h3>מארז טעימות</h3>
+          <p>דריפ באגז מבתי קלייה שונים בארץ, במקום עשר שקיות פולים.</p>
+          <div class="row"><span class="price">בקרוב</span><button class="add" type="button" data-soon>עדכנו אותי</button></div>
+        </div>
+      </article>
+  </div>
+  <p class="more"><span class="todo">עוד מוצרים: קפה של בלומס במשקל, כוסות GONA</span></p>
+</div></section>
+</main>
+
+<footer>
+  <div class="in">
+    <a class="logo" href="index.html"><img src="img/logo.png" alt="חשק, חברה של קפה"></a>
+    <nav aria-label="תחתון"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a><a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
+    <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
+  </div>
+</footer>
+
+</div>
+<script src="site.js"></script>
+</body>
+</html>
