@@ -23,3 +23,10 @@
     q.value=Math.max(1,(parseInt(q.value,10)||1)+parseInt(b.getAttribute('data-step'),10));
   });});
 })();
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var els=document.querySelectorAll('section .head, section .card, section .step, .strip figure, .ig img, .prose, blockquote, .spec, .process li, .tip, .faq details, .places');
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){el.classList.add('reveal');io.observe(el);});
+})();

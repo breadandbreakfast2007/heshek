@@ -41,7 +41,7 @@ LAYOUT='''<!doctype html>
 
 <footer>
   <div class="in">
-    <a class="logo" href="index.html"><img src="img/logo-light.svg" alt="חשק, חברה של קפה"></a>
+    <a class="logo" href="index.html"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     <nav aria-label="תחתון">{fnav}<a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
     <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
   </div>
@@ -70,7 +70,7 @@ cards_c=[c.replace('<article class="card','<article data-cat="%s" class="card'%k
 how=part('how'); where=part('where'); biz=part('biz'); story=part('story'); insta=part('insta')
 
 # ---------- home ----------
-home_shop=shop.replace('</div>\n  </div>\n</section>','</div>\n    <p class="more"><a class="btn alt" href="shop.html">לכל המוצרים</a></p>\n  </div>\n</section>')
+home_shop=shop.replace('<div class="grid">','<div class="grid rail">').replace('</div>\n  </div>\n</section>','</div>\n    <p class="more"><a class="btn alt" href="shop.html">לכל המוצרים</a></p>\n  </div>\n</section>')
 home_how=how.replace('<p class="note"><span class="todo">כמות מים וזמן חליטה לפי ההמלצה שלך</span></p>','<p class="more"><a class="btn alt" href="how.html">עוד על ההכנה</a></p>')
 ticker=re.search(r'<div class="ticker".*?</div></div>',biz,re.S).group(0)
 floaty=re.search(r'<div class="ph floaty">.*?</div>',biz,re.S).group(0)
@@ -85,7 +85,7 @@ home_biz=ticker+'''
     <div class="cols">
       <div>'''+floaty+'''</div>
       <div>
-        <div class="proof" style="margin-top:0"><b>4,500</b><span>שקיות ממותגות שהכנו ל־Wix, למטבחונים שלהם.</span></div>
+        <p class="proof" style="margin-top:0"><span>כבר הכנו</span><b>4,500</b><span>שקיות ממותגות ל־Wix, למטבחונים שלהם.</span></p>
         <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li></ul>
         <p class="more"><a class="btn alt" href="business.html">איך זה עובד ומה אפשר</a></p>
       </div>
