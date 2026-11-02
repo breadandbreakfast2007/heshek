@@ -2,7 +2,7 @@
 import os,re
 R=os.path.dirname(os.path.abspath(__file__))
 def part(n): return open(os.path.join(R,'parts_%s.html'%n),encoding='utf-8').read()
-NAV=[('shop.html','חנות'),('how.html','איך מכינים'),('business.html','לעסקים'),('story.html','הסיפור')]
+NAV=[('shop.html','חנות'),('how.html','איך מכינים'),('business.html','לעסקים ואירועים'),('story.html','הסיפור'),('contact.html','צרו קשר')]
 def nav(active):
     return ''.join('<a href="%s"%s>%s</a>'%(h,' aria-current="page"' if h==active else '',t) for h,t in NAV)
 LAYOUT='''<!doctype html>
@@ -76,22 +76,28 @@ home_shop=shop.replace('<div class="grid">','<div class="grid rail">').replace('
 home_how=how.replace('<p class="note"><span class="todo">כמות מים וזמן חליטה לפי ההמלצה שלך</span></p>','<p class="more"><a class="btn alt" href="how.html">עוד על ההכנה</a></p>')
 ticker=re.search(r'<div class="ticker".*?</div></div>',biz,re.S).group(0)
 floaty=re.search(r'<div class="ph floaty">.*?</div>',biz,re.S).group(0)
+leadform=re.search(r'    <form id="bizform".*?</form>',biz,re.S).group(0)
 home_biz=ticker+'''
 
 <section id="biz" class="biz">
   <div class="in">
     <div class="head">
       <h2>הקפה שלכם. המותג שלכם. הביצוע שלנו.</h2>
-      <p>דריפ באגז עם השם שלכם, לבתי קפה, לבתי קלייה ולעסקים.</p>
+      <p>דריפ באגז עם השם שלכם. לבתי קפה, לעסקים, ולכל מי שמתכנן אירוע.</p>
     </div>
     <div class="cols">
       <div>'''+floaty+'''</div>
       <div>
         <p class="proof" style="margin-top:0"><span>כבר הכנו</span><b>4,500</b><span>שקיות ממותגות ל־Wix, למטבחונים שלהם.</span></p>
-        <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li></ul>
+        <div class="event">
+          <h3>יש לכם אירוע?</h3>
+          <p>חתונה, כנס, יום כיף לעובדים. במקום עוד מגנט שנשאר במגירה, שקית קפה עם השם שלכם שמישהו באמת ישתה מחר בבוקר.</p>
+        </div>
+        <ul class="fits"><li>בתי קפה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>חתונות</li><li>כנסים</li><li>מתנות לעובדים</li></ul>
         <p class="more"><a class="btn alt" href="business.html">איך זה עובד ומה אפשר</a></p>
       </div>
     </div>
+'''+leadform+'''
   </div>
 </section>'''
 home_story='''<section id="story" class="story">
@@ -199,4 +205,27 @@ page('story.html','הסיפור | חשק','למה חשק, ומי מאחוריו.
   <h1>חברה של קפה</h1>
 </div></div>
 '''+story.replace('<div class="head" style="margin-bottom:16px"><h2>חברה של קפה</h2></div>','')+'\n'+where,'story.html')
+page('contact.html','צרו קשר | חשק','איך מגיעים לחשק.','''<div class="pagehead"><div class="in">
+  <div class="label">צרו קשר</div>
+  <h1>מדברים?</h1>
+  <p>שאלה על הזמנה, רעיון לשיתוף פעולה, או סתם בא לכם לדבר על קפה.</p>
+</div></div>
+<section><div class="in contact">
+  <div class="ways">
+    <div class="way"><span class="label">וואטסאפ</span><b><span class="todo">מספר</span></b></div>
+    <div class="way"><span class="label">מייל</span><b><span class="todo">כתובת מייל</span></b></div>
+    <div class="way"><span class="label">אינסטגרם</span><b><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener" dir="ltr">@heshek.coffee</a></b></div>
+    <div class="way"><span class="label">לעסקים ואירועים</span><b><a href="business.html">לטופס ההזמנה</a></b></div>
+  </div>
+  <form id="bizform" class="leadform" novalidate>
+    <h3>השאירו הודעה</h3>
+    <div class="f2">
+      <label for="c-name">שם<input id="c-name" name="name" autocomplete="name"></label>
+      <label for="c-phone">טלפון או מייל<input id="c-phone" name="contact" autocomplete="email" dir="ltr"></label>
+    </div>
+    <label for="c-msg">ההודעה<textarea id="c-msg" name="msg"></textarea></label>
+    <button class="btn" type="submit">שליחה</button>
+    <p id="formmsg" aria-live="polite"></p>
+  </form>
+</div></section>''','contact.html')
 print('built')

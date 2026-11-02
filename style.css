@@ -55,7 +55,7 @@ header nav a:hover,header nav a[aria-current="page"]{border-bottom-color:var(--i
 #mnav{border-top:1px solid var(--line);background:var(--paper)}
 #mnav .in{display:grid;gap:4px;padding-block:12px;font-size:1.25rem;font-family:var(--f-display)}
 #mnav a{text-decoration:none;padding:6px 0}
-@media (min-width:860px){header nav{display:flex}.menu-btn,#mnav{display:none!important}}
+@media (min-width:1080px){header nav{display:flex}.menu-btn,#mnav{display:none!important}}
 
 /* buttons */
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
@@ -221,3 +221,18 @@ footer small{color:var(--ink-soft)}
 .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .js .reveal.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.js .reveal{opacity:1;transform:none}}
+
+/* events + contact */
+.event{background:var(--paper);border-radius:var(--r);padding:18px 20px;margin-block:4px 14px}
+.event h3{font-size:1.4rem;margin-bottom:6px}
+.event p{color:var(--ink-soft)}
+.biz > .in > .leadform{margin-top:36px}
+.contact{display:grid;gap:32px}
+@media (min-width:860px){.contact{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.ways{display:grid;gap:0;border-top:1px solid var(--line)}
+.way{display:grid;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
+.way b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.way a{text-decoration:none}
+.way a:hover{text-decoration:underline}
+.contact form{background:var(--sand)}
+.contact form input,.contact form textarea{background:var(--paper)}

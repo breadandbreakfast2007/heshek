@@ -4,7 +4,7 @@
   <div class="in">
     <div class="head">
       <h2>הקפה שלכם. המותג שלכם. הביצוע שלנו.</h2>
-      <p>אנחנו הופכים את הקפה שלכם למותג שאנשים לוקחים הביתה. לבתי קפה, לבתי קלייה ולעסקים שרוצים דריפ באגז עם השם שלהם.</p>
+      <p>אנחנו הופכים את הקפה שלכם למותג שאנשים לוקחים הביתה. לבתי קפה, לבתי קלייה, לעסקים, ולכל מי שמתכנן אירוע.</p>
     </div>
     <div class="cols">
       <div>
@@ -16,7 +16,7 @@
         </div>
         <p class="proof"><span>כבר הכנו</span><b>4,500</b><span>שקיות ממותגות ל־Wix, למטבחונים שלהם.</span></p>
         <p>מתאים ל:</p>
-        <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li></ul>
+        <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li><li>חתונות</li><li>כנסים</li><li>מתנות לעובדים</li></ul>
       </div>
       <div class="flow">
         <h3>איך זה עובד</h3>
@@ -49,15 +49,15 @@
         </ul>
       </div>
     </div>
-    <form id="bizform" novalidate>
+    <form id="bizform" class="leadform" novalidate>
       <h3>ספרו לנו מה צריך</h3>
       <div class="f2">
         <label for="b-name">שם<input id="b-name" name="name" autocomplete="name"></label>
-        <label for="b-biz">עסק<input id="b-biz" name="biz" autocomplete="organization"></label>
         <label for="b-phone">טלפון<input id="b-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
+        <label for="b-type">בשביל מה<select id="b-type" name="type"><option>עסק</option><option>אירוע</option><option>הזמנה גדולה</option><option>משהו אחר</option></select></label>
         <label for="b-qty">כמה שקיות, בערך<select id="b-qty" name="qty"><option>עוד לא יודע</option><option>עד 500</option><option>500 עד 2,000</option><option>מעל 2,000</option></select></label>
       </div>
-      <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: הקפה שלנו, צבע אריזה, תאריך"></textarea></label>
+      <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: חתונה ב־12 ביוני, 250 אורחים, לוגו על המדבקה"></textarea></label>
       <button class="btn" type="submit">שליחה</button>
       <p id="formmsg" aria-live="polite"></p>
     </form>

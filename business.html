@@ -20,14 +20,14 @@
   <div class="in">
     <div class="hdr-start">
       <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="תפריט"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></button>
-      <nav aria-label="ראשי"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html" aria-current="page">לעסקים</a><a href="story.html">הסיפור</a></nav>
+      <nav aria-label="ראשי"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html" aria-current="page">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a></nav>
     </div>
     <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     <div class="hdr-end">
       <button class="cart" id="cart" type="button" aria-label="סל קניות"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span id="count" class="badge">0</span></button>
     </div>
   </div>
-  <div id="mnav" hidden><div class="in"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html" aria-current="page">לעסקים</a><a href="story.html">הסיפור</a></div></div>
+  <div id="mnav" hidden><div class="in"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html" aria-current="page">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a></div></div>
 </header>
 
 <main id="top">
@@ -37,7 +37,7 @@
   <div class="in">
     <div class="head">
       <h2>הקפה שלכם. המותג שלכם. הביצוע שלנו.</h2>
-      <p>אנחנו הופכים את הקפה שלכם למותג שאנשים לוקחים הביתה. לבתי קפה, לבתי קלייה ולעסקים שרוצים דריפ באגז עם השם שלהם.</p>
+      <p>אנחנו הופכים את הקפה שלכם למותג שאנשים לוקחים הביתה. לבתי קפה, לבתי קלייה, לעסקים, ולכל מי שמתכנן אירוע.</p>
     </div>
     <div class="cols">
       <div>
@@ -49,7 +49,7 @@
         </div>
         <p class="proof"><span>כבר הכנו</span><b>4,500</b><span>שקיות ממותגות ל־Wix, למטבחונים שלהם.</span></p>
         <p>מתאים ל:</p>
-        <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li></ul>
+        <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li><li>חתונות</li><li>כנסים</li><li>מתנות לעובדים</li></ul>
       </div>
       <div class="flow">
         <h3>איך זה עובד</h3>
@@ -82,15 +82,15 @@
         </ul>
       </div>
     </div>
-    <form id="bizform" novalidate>
+    <form id="bizform" class="leadform" novalidate>
       <h3>ספרו לנו מה צריך</h3>
       <div class="f2">
         <label for="b-name">שם<input id="b-name" name="name" autocomplete="name"></label>
-        <label for="b-biz">עסק<input id="b-biz" name="biz" autocomplete="organization"></label>
         <label for="b-phone">טלפון<input id="b-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
+        <label for="b-type">בשביל מה<select id="b-type" name="type"><option>עסק</option><option>אירוע</option><option>הזמנה גדולה</option><option>משהו אחר</option></select></label>
         <label for="b-qty">כמה שקיות, בערך<select id="b-qty" name="qty"><option>עוד לא יודע</option><option>עד 500</option><option>500 עד 2,000</option><option>מעל 2,000</option></select></label>
       </div>
-      <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: הקפה שלנו, צבע אריזה, תאריך"></textarea></label>
+      <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: חתונה ב־12 ביוני, 250 אורחים, לוגו על המדבקה"></textarea></label>
       <button class="btn" type="submit">שליחה</button>
       <p id="formmsg" aria-live="polite"></p>
     </form>
@@ -102,7 +102,7 @@
 <footer>
   <div class="in">
     <a class="logo" href="index.html"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
-    <nav aria-label="תחתון"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים</a><a href="story.html">הסיפור</a><a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
+    <nav aria-label="תחתון"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a><a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
     <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
   </div>
 </footer>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>צרו קשר | חשק</title>
+<meta name="description" content="איך מגיעים לחשק.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700&family=Karantina:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="draftbar"><div class="in">טיוטה לעיון. מה שמסומן ב<span class="todo" style="font-size:.75rem">להחלפה</span> מחכה לחומרים או לפרטים.</div></div>
+
+<header>
+  <div class="in">
+    <div class="hdr-start">
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="תפריט"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></button>
+      <nav aria-label="ראשי"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html" aria-current="page">צרו קשר</a></nav>
+    </div>
+    <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
+    <div class="hdr-end">
+      <button class="cart" id="cart" type="button" aria-label="סל קניות"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span id="count" class="badge">0</span></button>
+    </div>
+  </div>
+  <div id="mnav" hidden><div class="in"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html" aria-current="page">צרו קשר</a></div></div>
+</header>
+
+<main id="top">
+<div class="pagehead"><div class="in">
+  <div class="label">צרו קשר</div>
+  <h1>מדברים?</h1>
+  <p>שאלה על הזמנה, רעיון לשיתוף פעולה, או סתם בא לכם לדבר על קפה.</p>
+</div></div>
+<section><div class="in contact">
+  <div class="ways">
+    <div class="way"><span class="label">וואטסאפ</span><b><span class="todo">מספר</span></b></div>
+    <div class="way"><span class="label">מייל</span><b><span class="todo">כתובת מייל</span></b></div>
+    <div class="way"><span class="label">אינסטגרם</span><b><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener" dir="ltr">@heshek.coffee</a></b></div>
+    <div class="way"><span class="label">לעסקים ואירועים</span><b><a href="business.html">לטופס ההזמנה</a></b></div>
+  </div>
+  <form id="bizform" class="leadform" novalidate>
+    <h3>השאירו הודעה</h3>
+    <div class="f2">
+      <label for="c-name">שם<input id="c-name" name="name" autocomplete="name"></label>
+      <label for="c-phone">טלפון או מייל<input id="c-phone" name="contact" autocomplete="email" dir="ltr"></label>
+    </div>
+    <label for="c-msg">ההודעה<textarea id="c-msg" name="msg"></textarea></label>
+    <button class="btn" type="submit">שליחה</button>
+    <p id="formmsg" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+
+<footer>
+  <div class="in">
+    <a class="logo" href="index.html"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
+    <nav aria-label="תחתון"><a href="shop.html">חנות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a><a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
+    <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
+  </div>
+</footer>
+
+</div>
+<script src="site.js"></script>
+</body>
+</html>
