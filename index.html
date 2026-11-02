@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>חשק עמוד בית</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700&family=Karantina:wght@700&display=swap">
+<style>
+/* Layout: comic-strip panels. Sections framed like comic panels with thick ink borders; poster colours from the brand's Instagram. One look, printed-poster world, single theme by choice. */
+:root{
+  --ink:#3b1c12;        /* logo brown */
+  --paper:#fbf6ec;      /* poster paper */
+  --sun:#f2d671;        /* "יש קפה?" yellow */
+  --blush:#efb8b0;      /* pink mug */
+  --sky:#a8c3dc;        /* "רק עוד כוס" blue */
+  --night:#191412;      /* black drip bag */
+  --kraft:#cdb79a;      /* kraft bag */
+  --muted:#6e5246;
+  --todo:#1f6fd1;
+  --f-display:"Suez One","Frank Ruhl Libre",Georgia,serif;
+  --f-body:"Assistant","Arial Hebrew",Arial,sans-serif;
+  --f-label:"Karantina","Assistant",Arial,sans-serif;
+  --border:3px solid var(--ink);
+  color-scheme:light;
+}
+html{background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
+*{box-sizing:border-box}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{direction:rtl;overflow-x:clip}
+.in{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.1;text-wrap:balance;margin:0}
+p{margin:0}
+.label{font-family:var(--f-label);font-size:1.5rem;line-height:1;letter-spacing:.02em}
+:focus-visible{outline:3px solid var(--todo);outline-offset:3px}
+
+/* draft notes */
+.draftbar{background:var(--todo);color:#fff;font-size:.9rem}
+.draftbar .in{padding-block:8px}
+.todo{display:inline-block;border:2px dashed var(--todo);color:var(--todo);background:#fff;font-size:.8rem;font-weight:700;line-height:1.3;padding:3px 8px;border-radius:4px}
+.pin{position:absolute;top:8px;inset-inline-start:8px;z-index:2}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:var(--border)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+header .in{display:flex;align-items:center;gap:16px;padding-block:10px}
+.logo img{height:44px;width:auto}
+nav{display:none;gap:22px;font-weight:700;margin-inline-start:auto}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.cart{margin-inline-start:auto;display:flex;align-items:center;gap:6px;font-weight:700;background:none;border:var(--border);border-radius:999px;padding:4px 14px;font:inherit;font-weight:700;color:var(--ink)}
+.menu-btn{background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:6px 14px;font:inherit;font-weight:700}
+#mnav{border-top:var(--border);background:var(--paper)}
+#mnav .in{display:grid;gap:6px;padding-block:12px;font-size:1.2rem;font-weight:700}
+#mnav a{text-decoration:none;padding:6px 0}
+@media (min-width:820px){nav{display:flex}.cart{margin-inline-start:0}.menu-btn,#mnav{display:none!important}}
+
+/* hero */
+.hero{background:var(--sun);border-bottom:var(--border)}
+.hero .in{display:grid;gap:24px;padding-block:28px 36px}
+.hero h1{font-size:clamp(2.6rem,10vw,5.2rem)}
+.hero h1 span{display:block}
+.hero .lede{font-size:1.2rem;max-width:30ch;margin-top:14px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:1.05rem;padding:12px 22px;border:var(--border);border-radius:999px;background:var(--ink);color:var(--paper);box-shadow:4px 4px 0 var(--ink);transition:transform .12s, box-shadow .12s}
+.btn.alt{background:var(--paper);color:var(--ink)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.panel{position:relative;border:var(--border);background:var(--paper);box-shadow:6px 6px 0 var(--ink);overflow:hidden}
+.hero .panel{transform:rotate(-1.2deg)}
+@media (min-width:820px){.hero .in{grid-template-columns:1.1fr .9fr;align-items:center;padding-block:56px}}
+
+section{border-bottom:var(--border)}
+section > .in{padding-block:44px}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:10px 20px;margin-bottom:24px}
+.head h2{font-size:clamp(2rem,6vw,3rem)}
+.head p{max-width:46ch;color:var(--muted)}
+
+/* shop */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{display:flex;flex-direction:column;border:var(--border);background:#fff;min-width:0}
+.card .ph{position:relative;aspect-ratio:4/5;overflow:hidden;border-bottom:var(--border);background:var(--kraft)}
+.card .ph img{width:100%;height:100%;object-fit:cover}
+.card .body{display:flex;flex-direction:column;gap:8px;padding:14px;flex:1}
+.card h3{font-size:1.45rem}
+.card .kind{font-family:var(--f-label);font-size:1.3rem;color:var(--muted);line-height:1}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px}
+.price{font-family:var(--f-display);font-size:1.3rem;font-variant-numeric:tabular-nums}
+.add{font:inherit;font-weight:700;border:var(--border);background:var(--sun);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.card.soon{background:var(--blush)}
+.card.soon .ph{background:var(--blush);display:grid;place-items:center;padding:20px}
+.soon-art{font-family:var(--f-display);font-size:4.5rem;line-height:.9;text-align:center}
+.soon-art small{display:block;font-family:var(--f-label);font-size:1.6rem}
+
+/* how */
+.how{background:var(--sky)}
+.steps{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));counter-reset:s}
+.step{border:var(--border);background:var(--paper);display:flex;flex-direction:column;min-width:0}
+.step .ph{aspect-ratio:1;overflow:hidden;border-bottom:var(--border)}
+.step .ph img{width:100%;height:100%;object-fit:cover}
+.step .t{padding:14px 16px 18px;display:grid;gap:6px}
+.step h3{font-size:2rem;display:flex;gap:10px;align-items:baseline}
+.step h3::before{counter-increment:s;content:counter(s);font-family:var(--f-label);font-size:1.6rem;background:var(--ink);color:var(--paper);border-radius:999px;width:1.5em;height:1.5em;display:inline-grid;place-items:center;line-height:1}
+.how .note{margin-top:18px}
+
+/* where */
+.strip{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.strip figure{margin:0;flex:0 0 min(62vw,240px);scroll-snap-align:start;border:var(--border);background:#fff;position:relative}
+.strip img{aspect-ratio:4/5;width:100%;object-fit:cover}
+.strip figcaption{padding:8px 12px;font-weight:700;border-top:var(--border)}
+.places{font-family:var(--f-display);font-size:clamp(1.4rem,4.5vw,2.1rem);line-height:1.35;max-width:28ch;margin-bottom:24px}
+
+/* business */
+.biz{background:var(--night);color:var(--paper)}
+.biz .head p{color:var(--kraft)}
+.biz .cols{display:grid;gap:28px}
+@media (min-width:820px){.biz .cols{grid-template-columns:1fr 1fr;align-items:start}}
+.proof{border:3px solid var(--paper);padding:16px 18px;display:flex;gap:16px;align-items:center;margin-block:18px}
+.proof b{font-family:var(--f-display);font-weight:400;font-size:2.6rem;line-height:1;color:var(--sun);font-variant-numeric:tabular-nums}
+.fits{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:14px 0 0;list-style:none}
+.fits li{border:2px solid var(--kraft);border-radius:999px;padding:3px 12px;font-weight:600}
+.biz .ph{position:relative;border:3px solid var(--paper)}
+form{display:grid;gap:12px;background:var(--paper);color:var(--ink);border:3px solid var(--paper);padding:18px;box-shadow:6px 6px 0 var(--sun)}
+form h3{font-size:1.6rem}
+.f2{display:grid;gap:12px}
+@media (min-width:520px){.f2{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:4px;font-weight:700;font-size:.95rem;min-width:0}
+input,textarea,select{font:inherit;font-weight:400;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:6px;padding:9px 10px;width:100%}
+textarea{min-height:90px;resize:vertical}
+form .btn{justify-self:start;cursor:pointer}
+#formmsg{font-weight:700;color:var(--todo)}
+
+/* story */
+.story .in.cols{display:grid;gap:28px}
+@media (min-width:820px){.story .in.cols{grid-template-columns:.8fr 1.2fr;align-items:center}}
+.story blockquote{margin:0;display:grid;gap:14px;font-size:1.15rem;max-width:58ch}
+.story blockquote p:first-child{font-family:var(--f-display);font-size:1.7rem;line-height:1.25}
+.sign{font-family:var(--f-label);font-size:1.8rem}
+
+/* insta */
+.insta{background:var(--blush)}
+.ig{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+@media (min-width:820px){.ig{grid-template-columns:repeat(6,1fr)}}
+.ig img{aspect-ratio:4/5;width:100%;object-fit:cover;border:var(--border)}
+
+footer{background:var(--ink);color:var(--paper)}
+footer .in{display:grid;gap:18px;padding-block:32px}
+footer .logo img{height:54px;filter:brightness(0) invert(.96) sepia(.2)}
+footer nav{display:flex;flex-wrap:wrap;gap:16px;margin:0}
+footer small{color:var(--kraft)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap" dir="rtl" lang="he">
+
+<div class="draftbar"><div class="in">טיוטה לעיון. מה שמסומן ב<span class="todo" style="font-size:.75rem">להחלפה</span> מחכה לחומרים או לפרטים ממך.</div></div>
+
+<header>
+  <div class="in">
+    <a class="logo" href="#top" aria-label="חשק, חברה של קפה"><img src="img/logo.png" alt="חשק, חברה של קפה"></a>
+    <nav aria-label="ראשי">
+      <a href="#shop">חנות</a><a href="#how">איך מכינים</a><a href="#biz">לעסקים</a><a href="#story">הסיפור</a>
+    </nav>
+    <button class="cart" id="cart" type="button" aria-label="סל">סל <span id="count">0</span></button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">תפריט</button>
+  </div>
+  <div id="mnav" hidden><div class="in">
+    <a href="#shop">חנות</a><a href="#how">איך מכינים</a><a href="#biz">לעסקים</a><a href="#story">הסיפור</a>
+  </div></div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+  <div class="in">
+    <div>
+      <div class="label">דריפ באגז של חשק</div>
+      <h1><span>קורעים.</span><span>תולים.</span><span>מוזגים.</span></h1>
+      <p class="lede">קפה פילטר טוב בתוך שקית אחת. צריך רק כוס ומים חמים.</p>
+      <div class="btns">
+        <a class="btn" href="#shop">לחנות</a>
+        <a class="btn alt" href="#biz">דריפ באגז לעסק שלך</a>
+      </div>
+    </div>
+    <div class="panel">
+      <span class="todo pin">איור AI, לגרסה סופית</span>
+      <img src="img/comic.jpg" alt="קומיקס: קורעים, תולים, מוזגים, בלי דרמה">
+    </div>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="in">
+    <div class="head">
+      <h2>מה יש עכשיו</h2>
+      <p>מתחילים מדריפ באגז. קפה במשקל ועוד דברים טובים מגיעים בהמשך.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/kraft-indonesia.jpg" alt="דריפ באגז אינדונזיה"></div>
+        <div class="body">
+          <span class="kind">דריפ באגז</span>
+          <h3>Indonesia</h3>
+          <span class="todo">מקור, קלייה, טעמים, יחידות באריזה</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/house-blend.jpg" alt="דריפ באגז האוס בלנד"></div>
+        <div class="body">
+          <span class="kind">דריפ באגז</span>
+          <h3>House Blend</h3>
+          <span class="todo">מקור, קלייה, טעמים, יחידות באריזה</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><span class="todo pin">צילום מוצר נקי</span><img src="img/turkish.jpg" alt="קפה טורקי קלוי וטחון"></div>
+        <div class="body">
+          <span class="kind">קפה טורקי</span>
+          <h3>קלוי וטחון</h3>
+          <span class="todo">משקל וטעמים</span>
+          <div class="row"><span class="price">₪ <span class="todo">מחיר</span></span><button class="add" type="button">לסל</button></div>
+        </div>
+      </article>
+      <article class="card soon">
+        <div class="ph"><div class="soon-art">10<small>קולים. קופסה אחת.</small></div></div>
+        <div class="body">
+          <span class="kind">בקרוב</span>
+          <h3>מארז טעימות</h3>
+          <p>דריפ באגז מבתי קלייה שונים בארץ, במקום עשר שקיות פולים.</p>
+          <div class="row"><span class="price">בקרוב</span><button class="add" type="button" data-soon>עדכנו אותי</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="in">
+    <div class="head">
+      <h2>איך מכינים</h2>
+      <p>שלושה צעדים, בלי מכונה ובלי לכלוך.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="ph"><img src="img/hand-bag.jpg" alt="יד מחזיקה דריפ באג של חשק"></div>
+        <div class="t"><h3>קורעים</h3><p>פותחים את השקית, ואז קורעים את החלק העליון של הפילטר לאורך הקו.</p></div>
+      </div>
+      <div class="step">
+        <div class="ph"><img src="img/hang.jpg" alt="דריפ באג תלוי על כוס"></div>
+        <div class="t"><h3>תולים</h3><p>פותחים את שתי הכנפיים ותולים על שפת הכוס.</p></div>
+      </div>
+      <div class="step">
+        <div class="ph"><img src="img/pour.jpg" alt="מוזגים מים חמים לתוך הדריפ באג"></div>
+        <div class="t"><h3>מוזגים</h3><p>מוזגים מים חמים לאט, בכמה סבבים. מוציאים את השקית ושותים.</p></div>
+      </div>
+    </div>
+    <p class="note"><span class="todo">כמות מים וזמן חליטה לפי ההמלצה שלך</span></p>
+  </div>
+</section>
+
+<section id="where">
+  <div class="in">
+    <p class="places">במשרד עם הקפה העצוב. בשטח. ברכבת. בצימר. בכיס של המעיל.</p>
+    <div class="strip" tabindex="0" aria-label="איפה זה עובד">
+      <figure><img src="img/poster-shetach.jpg" alt="פוסטר קפה בשטח"><figcaption>קפה בשטח</figcaption></figure>
+      <figure><img src="img/poster-baderech.jpg" alt="פוסטר בדרך הביתה"><figcaption>בדרך הביתה</figcaption></figure>
+      <figure><img src="img/poster-hamesh.jpg" alt="פוסטר חמש דקות שקט"><figcaption>חמש דקות שקט</figcaption></figure>
+      <figure><img src="img/poster-od-kos.jpg" alt="פוסטר רק עוד כוס"><figcaption>רק עוד כוס</figcaption></figure>
+      <figure><img src="img/train.jpg" alt="כוס קפה ברכבת"><figcaption>ברכבת</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="biz" class="biz">
+  <div class="in">
+    <div class="head">
+      <h2>דריפ באגז עם השם שלכם</h2>
+      <p>אנחנו ממלאים, אורזים וממתגים דריפ באגז לעסקים. השקית נושאת את השם שלכם, הקפה הוא שלנו.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <div class="ph"><span class="todo pin">צילום אמיתי של הזמנה ממותגת</span><img src="img/shelf.jpg" alt="מדפים עם דריפ באגז בצבעים שונים"></div>
+        <div class="proof"><b>4,500</b><span>שקיות ממותגות שהכנו ל־Wix, למטבחונים שלהם.</span></div>
+        <p>מתאים ל:</p>
+        <ul class="fits"><li>מטבחונים במשרד</li><li>צימרים</li><li>סוף סיור ביקב</li><li>חנויות נוחות</li><li>אירועים</li></ul>
+        <p style="margin-top:14px"><span class="todo">מינימום הזמנה וזמני אספקה</span></p>
+      </div>
+      <form id="bizform" novalidate>
+        <h3>ספרו לנו מה צריך</h3>
+        <div class="f2">
+          <label for="b-name">שם<input id="b-name" name="name" autocomplete="name"></label>
+          <label for="b-biz">עסק<input id="b-biz" name="biz" autocomplete="organization"></label>
+          <label for="b-phone">טלפון<input id="b-phone" name="phone" type="tel" autocomplete="tel" dir="ltr"></label>
+          <label for="b-qty">כמה שקיות, בערך<select id="b-qty" name="qty"><option>עוד לא יודע</option><option>עד 500</option><option>500 עד 2,000</option><option>מעל 2,000</option></select></label>
+        </div>
+        <label for="b-msg">עוד משהו<textarea id="b-msg" name="msg" placeholder="למשל: לוגו על השקית, אירוע בתאריך מסוים"></textarea></label>
+        <button class="btn" type="submit">שליחה</button>
+        <p id="formmsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="in cols">
+    <div class="panel"><span class="todo pin">תמונה: ידיים אורזות, או איור שלך</span><img src="img/hug.jpg" alt="איור: בחורה מחבקת כוס קפה ענקית"></div>
+    <div>
+      <div class="head" style="margin-bottom:16px"><h2>חברה של קפה</h2></div>
+      <blockquote>
+        <p>20 שנה אני בקפה. הדרכתי סניפים בחו״ל, תיקנתי מכונות, תכננתי עמדות ניידות, ובסוף פתחתי בית קפה משלי.</p>
+        <p>בית קפה, מתברר, זה בעיקר תפעול. משמרות, ספקים, גריינד. איפשהו בדרך הלך לי החשק. אז חזרתי לדבר עצמו: הקפה.</p>
+        <p>את הקפה אני לוקח מבלומס בפרדס חנה. אני מאוד אוהב את אסף, הבעלים, ואת הקלייה שלהם.</p>
+        <p>חשק זה גם ראשי תיבות: חברה של קפה. כזה שתמיד בא איתך.</p>
+      </blockquote>
+      <p class="sign" style="margin-top:14px"><span class="todo" style="font-family:var(--f-body)">השם שלך</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="insta">
+  <div class="in">
+    <div class="head">
+      <h2>@heshek.coffee</h2>
+      <a class="btn alt" href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">לאינסטגרם</a>
+    </div>
+    <div class="ig">
+      <img src="img/poster-bali.jpg" alt="">
+      <img src="img/poster-yesh-kafe.jpg" alt="">
+      <img src="img/bag-pink.jpg" alt="">
+      <img src="img/poster-od-kos.jpg" alt="">
+      <img src="img/backpack.jpg" alt="">
+      <img src="img/poster-shetach.jpg" alt="">
+    </div>
+    <p style="margin-top:14px"><span class="todo">באתר האמיתי הפיד יתעדכן לבד מהאינסטגרם</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="in">
+    <a class="logo" href="#top"><img src="img/logo.png" alt="חשק, חברה של קפה"></a>
+    <nav aria-label="תחתון"><a href="#shop">חנות</a><a href="#how">איך מכינים</a><a href="#biz">לעסקים</a><a href="#story">הסיפור</a><a href="#top">תקנון</a><a href="#top">משלוחים</a></nav>
+    <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('mnav');
+  btn.addEventListener('click',function(){var open=nav.hidden;nav.hidden=!open;btn.setAttribute('aria-expanded',String(open));});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.hidden=true;btn.setAttribute('aria-expanded','false');}});
+  var n=0,count=document.getElementById('count');
+  document.querySelectorAll('.add').forEach(function(b){b.addEventListener('click',function(){
+    if(b.hasAttribute('data-soon')){b.textContent='נעדכן אותך';b.disabled=true;return;}
+    n++;count.textContent=n;b.textContent='נוסף ✓';setTimeout(function(){b.textContent='לסל';},1200);
+  });});
+  document.getElementById('bizform').addEventListener('submit',function(e){
+    e.preventDefault();document.getElementById('formmsg').textContent='זו טיוטה, הטופס עוד לא שולח. באתר האמיתי הפנייה תגיע אליך למייל.';
+  });
+})();
+</script>
+
+</body>
+</html>
