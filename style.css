@@ -262,3 +262,4 @@ footer small{color:var(--ink-soft)}
 .fits li:not(:last-child)::after{content:"·";margin-inline:8px;color:var(--ink-soft);font-weight:400}
 .fits-label{margin:14px 0 0;color:var(--ink-soft)}
 @media(min-width:760px){.works{grid-template-columns:repeat(2,1fr)}}
+.works{grid-auto-flow:row;grid-template-columns:repeat(2,1fr);overflow:visible}
