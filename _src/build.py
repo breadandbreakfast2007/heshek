@@ -88,7 +88,7 @@ home_biz=ticker+'''
       <div>'''+floaty+'''</div>
       <div>
         <div class="proof"><p><b>Wix</b> הזמינו 4,500 שקיות חשק עם הלוגו שלהם. 1,500 חולקו לעובדים ביום הקפה הבינלאומי, ו־3,000 נמכרות בדלי שלהם.</p><p>וב<b>יקב רמות נפתלי</b> מוכרים למבקרים שקיות עם המותג של היקב, בסוף סיור היין.</p></div>
-        <div class="works" aria-label="עבודות שעשינו"><figure><img src="img/works/wix-cafe.jpg" alt="שקית דריפ ממותגת WIX CAFE" loading="lazy"><figcaption>Wix</figcaption></figure><figure><img src="img/works/naftaly-pair.jpg" alt="שקיות דריפ ממותגות של רמות נפתלי" loading="lazy"><figcaption>רמות נפתלי</figcaption></figure><figure><img src="img/works/naftaly-corks.jpg" alt="שקית רמות נפתלי בין פקקי שעם" loading="lazy"><figcaption>רמות נפתלי, בין הפקקים</figcaption></figure></div>
+        <div class="works" aria-label="עבודות שעשינו"><figure><img src="img/works/wix-cafe.jpg" alt="דריפ באג ממותג WIX CAFE" loading="lazy"><figcaption>Wix</figcaption></figure><figure><img src="img/works/ramot-naftaly.jpg" alt="דריפ באג ממותג של יקב רמות נפתלי" loading="lazy"><figcaption>יקב רמות נפתלי</figcaption></figure></div>
         <div class="event">
           <h3>יש לכם אירוע?</h3>
           <p>חתונה, כנס או מתנה לעובדים. דריפ באגז עם העיצוב שלכם.</p>
