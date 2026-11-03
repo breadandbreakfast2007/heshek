@@ -66,13 +66,13 @@ hero=L(part('hero'))
 shop=part('shop')
 cards=re.findall(r'<article class="card.*?</article>',shop,re.S)
 # product links
-cats=['drip','drip','drip','drip','ground','soon']
+cats=['drip']*7+['ground','soon']
 cards_c=[c.replace('<article class="card','<article data-cat="%s" class="card'%k,1) for c,k in zip(cards,cats)]
 how=part('how'); where=part('where'); biz=part('biz'); story=part('story'); insta=part('insta')
 
 # ---------- home ----------
 home_shop=shop.replace('<div class="grid">','<div class="grid rail">').replace('</div>\n  </div>\n</section>','</div>\n    <p class="more"><a class="btn alt" href="shop.html">לכל המוצרים</a></p>\n  </div>\n</section>')
-home_how=how.replace('<p class="note"><span class="todo">כמות מים וזמן חליטה לפי ההמלצה שלך</span></p>','<p class="more"><a class="btn alt" href="how.html">עוד על ההכנה</a></p>')
+home_how=how.replace('<p class="note">בכל שקית 12 גרם קפה.</p>','<p class="more"><a class="btn alt" href="how.html">עוד על ההכנה</a></p>')
 ticker=re.search(r'<div class="ticker".*?</div></div>',biz,re.S).group(0)
 floaty=re.search(r'<div class="ph floaty">.*?</div>',biz,re.S).group(0)
 leadform=re.search(r'    <form id="bizform".*?</form>',biz,re.S).group(0)
@@ -155,10 +155,13 @@ page('product.html','אינדונזיה | חשק','דריפ באגז אינדו�
         <dt>עיבוד</dt><dd dir="ltr">Natural</dd>
         <dt>קלייה</dt><dd>בלומס, פרדס חנה</dd>
         <dt>בכוס</dt><dd><span class="todo">טעמים</span></dd>
-        <dt>בקופסה</dt><dd><span class="todo">כמה שקיות</span></dd>
+        <dt>בקופסה</dt><dd>10 שקיות</dd>
         <dt>בכל שקית</dt><dd>12 גרם</dd>
       </dl>
-      <p class="price" style="font-size:1.8rem">₪ <span class="todo">מחיר</span></p>
+      <fieldset class="opts"><legend class="sr-only">גודל</legend>
+        <label><input type="radio" name="size" value="box" checked> קופסה של 10 · ₪75</label>
+        <label><input type="radio" name="size" value="one"> שקית בודדת · ₪10</label>
+      </fieldset>
       <div class="buy">
         <div class="qty"><button type="button" data-step="1" aria-label="עוד אחד">+</button><input id="qty" value="1" inputmode="numeric" aria-label="כמות"><button type="button" data-step="-1" aria-label="אחד פחות">−</button></div>
         <button class="add" type="button">הוספה לסל</button>
@@ -184,17 +187,14 @@ page('how.html','איך מכינים | חשק','איך מכינים דריפ ב�
   <div class="head"><h2>כמה דברים קטנים</h2></div>
   <div class="tips">
     <div class="tip"><h3>הכוס</h3><p>בוחרים כוס שהכנפיים נתפסות יציב על השפה שלה, ושגבוהה מספיק כדי שהפילטר לא ישקע בקפה.</p></div>
-    <div class="tip"><h3>לאט</h3><p>מוזגים קצת, מחכים שיירד, וממשיכים. ככה המים עוברים דרך כל הקפה.</p></div>
+    <div class="tip"><h3>30 שניות בהתחלה</h3><p>המזיגה הראשונה רק מרטיבה את הקפה. מחכים בערך 30 שניות, והקפה מוכן לשאר המים. קוראים לזה בלום.</p></div>
     <div class="tip"><h3>בלי ציוד מיוחד</h3><p>קומקום, מיחם או מים חמים ממכונה במשרד. זה מספיק.</p></div>
   </div>
-  <p class="more"><span class="todo">כמות קפה, כמות מים כוללת ואופן המזיגה, לפי ההוראות שלך</span></p>
 </div></section>
 <section><div class="in">
   <div class="head"><h2>שאלות</h2></div>
   <div class="faq">
-    <details><summary>כמה זמן הקפה נשאר טרי?</summary><p><span class="todo">תשובה ממך</span></p></details>
     <details><summary>אפשר להוסיף חלב?</summary><p><span class="todo">תשובה ממך</span></p></details>
-    <details><summary>מה עושים עם השקית אחרי?</summary><p><span class="todo">תשובה ממך</span></p></details>
   </div>
 </div></section>''','how.html')
 

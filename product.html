@@ -51,10 +51,13 @@
         <dt>עיבוד</dt><dd dir="ltr">Natural</dd>
         <dt>קלייה</dt><dd>בלומס, פרדס חנה</dd>
         <dt>בכוס</dt><dd><span class="todo">טעמים</span></dd>
-        <dt>בקופסה</dt><dd><span class="todo">כמה שקיות</span></dd>
+        <dt>בקופסה</dt><dd>10 שקיות</dd>
         <dt>בכל שקית</dt><dd>12 גרם</dd>
       </dl>
-      <p class="price" style="font-size:1.8rem">₪ <span class="todo">מחיר</span></p>
+      <fieldset class="opts"><legend class="sr-only">גודל</legend>
+        <label><input type="radio" name="size" value="box" checked> קופסה של 10 · ₪75</label>
+        <label><input type="radio" name="size" value="one"> שקית בודדת · ₪10</label>
+      </fieldset>
       <div class="buy">
         <div class="qty"><button type="button" data-step="1" aria-label="עוד אחד">+</button><input id="qty" value="1" inputmode="numeric" aria-label="כמות"><button type="button" data-step="-1" aria-label="אחד פחות">−</button></div>
         <button class="add" type="button">הוספה לסל</button>
