@@ -121,7 +121,7 @@ page('index.html','חשק, חברה של קפה','דריפ באגז של חשק.
 page('shop.html','חנות | חשק','דריפ באגז, קפה ומארזים של חשק.','''<div class="pagehead sun"><div class="in">
   <div class="label">חנות</div>
   <h1>קפה</h1>
-  <p>אנחנו בוחרים קפה מבתי קלייה שאנחנו אוהבים, טוחנים ואורזים אותו בשקית אחת.</p>
+  <p>דריפ באגז וקפה טורקי.</p>
 </div></div>
 <section><div class="in">
   <div class="chips" role="group" aria-label="סינון">
