@@ -93,6 +93,7 @@ home_biz=ticker+'''
           <h3>יש לכם אירוע?</h3>
           <p>חתונה, כנס או מתנה לעובדים. דריפ באגז עם העיצוב שלכם.</p>
         </div>
+        <p class="fits-label">מתאים ל:</p>
         <ul class="fits"><li>בתי קפה</li><li>בתי קלייה</li><li>מטבחונים במשרד</li><li>צימרים</li><li>חתונות</li><li>כנסים</li><li>מתנות לעובדים</li></ul>
         <p class="more"><a class="btn alt" href="business.html">לפרטים והצעת מחיר</a></p>
       </div>
