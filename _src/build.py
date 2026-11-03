@@ -215,7 +215,7 @@ page('contact.html','צרו קשר | חשק','איך מגיעים לחשק.','''
 </div></div>
 <section><div class="in contact">
   <div class="ways">
-    <div class="way"><span class="label">מייל</span><b><span class="todo">כתובת מייל</span></b></div>
+    <div class="way"><span class="label">מייל</span><b><a href="mailto:hello@heshek.coffee" dir="ltr">hello@heshek.coffee</a></b></div>
     <div class="way"><span class="label">אינסטגרם</span><b><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener" dir="ltr">@heshek.coffee</a></b></div>
     <div class="way"><span class="label">לעסקים ואירועים</span><b><a href="business.html">לבקשת הצעת מחיר</a></b></div>
   </div>
