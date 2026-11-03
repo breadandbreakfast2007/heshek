@@ -232,3 +232,63 @@ page('contact.html','צרו קשר | חשק','איך מגיעים לחשק.','''
   </form>
 </div></section>''','contact.html')
 print('built')
+
+# ---------- subscription (DRAFT, not in nav) ----------
+page('subscription.html','מנוי | חשק','מנוי חודשי לדריפ באגז של חשק.','''<div class="pagehead"><div class="in">
+  <div class="label">מנוי</div>
+  <h1>קפה אחר כל חודש</h1>
+  <p>קופסת דריפ באגז שמגיעה אליכם פעם בחודש, מבית קלייה אחר בכל פעם.</p>
+</div></div>
+<section><div class="in">
+  <div class="product">
+    <div class="gallery"><div class="main"><img src="img/tray.jpg" alt="קופסאות דריפ באגז של חשק"></div></div>
+    <div class="pinfo">
+      <div class="label">מנוי חודשי</div>
+      <h2>מה מקבלים</h2>
+      <dl class="facts">
+        <dt>בכל חודש</dt><dd>קופסה של דריפ באגז, 12 גרם בכל שקית</dd>
+        <dt>הקפה</dt><dd>מתחלף כל חודש</dd>
+        <dt>בקופסה</dt><dd>כרטיס על הקפה ועל בית הקלייה</dd>
+        <dt>משלוח</dt><dd><span class="todo">ימים ועלות</span></dd>
+      </dl>
+      <fieldset class="opts"><legend class="sr-only">כמה שקיות</legend>
+        <label><input type="radio" name="sub" value="10" checked> 10 שקיות בחודש · <span class="todo">מחיר</span></label>
+        <label><input type="radio" name="sub" value="20"> 20 שקיות בחודש · <span class="todo">מחיר</span></label>
+      </fieldset>
+      <div class="buy"><button class="add" type="button">להצטרף למנוי</button></div>
+    </div>
+  </div>
+</div></section>
+<section><div class="in">
+  <div class="head"><h2>איך זה עובד</h2></div>
+  <div class="tips">
+    <div class="tip"><h3>בוחרים כמות</h3><p>10 או 20 שקיות בחודש.</p></div>
+    <div class="tip"><h3>מקבלים קופסה</h3><p>פעם בחודש, עם קפה שעוד לא טעמתם אצלנו.</p></div>
+    <div class="tip"><h3>עוצרים מתי שרוצים</h3><p><span class="todo">לאשר: אפשר להשהות או לבטל בכל זמן?</span></p></div>
+  </div>
+</div></section>
+<section><div class="in">
+  <div class="head"><h2>הקפה של החודש</h2></div>
+  <article class="card" style="max-width:340px">
+    <div class="ph"><img src="img/products/indonesia.jpg" alt="דריפ באגז אינדונזיה"></div>
+    <div class="body">
+      <h3>אינדונזיה</h3>
+      <p class="sub" dir="ltr">Sumatra · Sesongot Gayo · Natural</p>
+      <p class="meta">ענבים אדומים, דומדמניות ושוקולד חלב. מתוק ונקי.</p>
+      <p class="meta">קלייה: בלומס, פרדס חנה</p>
+    </div>
+  </article>
+  <p class="note" style="margin-top:10px"><span class="todo">דוגמה בלבד</span></p>
+</div></section>
+<section><div class="in">
+  <div class="head"><h2>מנוי במתנה</h2></div>
+  <p>3 חודשים של קפה, למי שאוהב קפה. <span class="todo">לאשר: מחיר ותקופה</span></p>
+</div></section>
+<section><div class="in">
+  <div class="head"><h2>שאלות</h2></div>
+  <div class="faq">
+    <details><summary>מתי הקופסה מגיעה?</summary><p><span class="todo">תשובה ממך</span></p></details>
+    <details><summary>אפשר לדלג על חודש?</summary><p><span class="todo">תשובה ממך</span></p></details>
+    <details><summary>אפשר לבחור את הקפה?</summary><p><span class="todo">תשובה ממך</span></p></details>
+  </div>
+</div></section>''')
