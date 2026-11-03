@@ -266,8 +266,14 @@ footer small{color:var(--ink-soft)}
 .subtext{font-size:1.15rem;max-width:52ch;color:var(--ink-soft)}
 .plans{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));border:0;padding:0;margin:0}
 .plan{position:relative;display:grid;gap:6px;align-content:start;border:1px solid var(--line);border-radius:var(--r);padding:20px 20px 22px 48px;cursor:pointer;background:var(--paper);transition:border-color .2s,background .2s}
-.plan input{position:absolute;top:22px;left:20px;accent-color:var(--ink)}
+.plan input{position:absolute;top:26px;left:20px;width:18px;height:18px;padding:0;margin:0;accent-color:var(--ink)}
 .plan h3{font-size:1.6rem}
 .plan .kind{font-weight:700;font-size:.85rem;color:var(--ink-soft)}
 .plan p{color:var(--ink-soft)}
 .plan:has(input:checked){border-color:var(--ink);background:var(--sand)}
+.roasters{background:var(--sand);border-radius:var(--r);padding:28px 24px;display:grid;gap:10px;max-width:640px}
+.roasters .big{font-family:var(--f-display);font-size:clamp(1.5rem,5.5vw,2rem);line-height:1.2}
+.roasters p{color:var(--ink-soft);font-size:1.08rem}
+.roasters .big{color:var(--ink)}
+.roasters .nos{font-size:.95rem;border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+section.tight{border-top:0}section.tight > .in{padding-block:8px 32px}
