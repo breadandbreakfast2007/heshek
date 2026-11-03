@@ -236,3 +236,9 @@ footer small{color:var(--ink-soft)}
 .way a:hover{text-decoration:underline}
 .contact form{background:var(--sand)}
 .contact form input,.contact form textarea{background:var(--paper)}
+.works{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-block:8px 22px;padding-bottom:6px;scrollbar-width:none}
+.works::-webkit-scrollbar{display:none}
+.works figure{margin:0;scroll-snap-align:start}
+.works img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius,16px);display:block}
+.works figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+@media(min-width:760px){.works{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}}
