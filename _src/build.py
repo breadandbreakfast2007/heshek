@@ -234,50 +234,44 @@ page('contact.html','צרו קשר | חשק','איך מגיעים לחשק.','''
 print('built')
 
 # ---------- subscription (DRAFT, not in nav) ----------
-page('subscription.html','מנוי | חשק','מנוי חודשי לדריפ באגז של חשק.','''<div class="pagehead"><div class="in">
-  <div class="label">מנוי</div>
-  <h1>קפה טוב, כל חודש</h1>
-  <p>מבחר דריפ באגז שמגיעים אליכם פעם בחודש.<br>אתם בוחרים מה לקבל, או שנותנים לנו להפתיע אתכם.</p>
+page('subscription.html','מנוי | חשק','מנוי הדריפ באגז של חשק.','''<div class="pagehead"><div class="in">
+  <div class="label">מנוי הדריפ באגז של חשק</div>
+  <h1>חשק קבוע.</h1>
+  <p>יש קפה שטועמים ורוצים שוב.<br>ויש את זה שעוד לא מכירים.</p>
+  <p>בכל חודש נשלח לכם מארז דריפ באגז עם קפה ששווה לפנות בשבילו כמה דקות. אפשר להישאר עם האהוב עליכם, לטעום כמה סוגים או להשאיר לנו את הבחירה.</p>
+  <p><a class="btn" href="#plans">מה במנוי?</a></p>
 </div></div>
 <section><div class="in">
-  <div class="product">
-    <div class="gallery"><div class="main"><img src="img/tray.jpg" alt="קופסאות דריפ באגז של חשק"></div></div>
-    <div class="pinfo">
-      <div class="label">מנוי חודשי</div>
-      <h2>מה בקופסה</h2>
-      <fieldset class="opts"><legend class="sr-only">מה בקופסה</legend>
-        <label><input type="radio" name="kind" value="one" checked> קפה אחד שבחרתם</label>
-        <label><input type="radio" name="kind" value="mix"> מיקס: 5 סוגים, 2 מכל אחד</label>
-        <label><input type="radio" name="kind" value="surprise"> הפתעה: מתחלף כל חודש</label>
-      </fieldset>
-      <h2 style="margin-top:8px">כמה קופסאות בחודש</h2>
-      <fieldset class="opts"><legend class="sr-only">כמה קופסאות בחודש</legend>
-        <label><input type="radio" name="boxes" value="1" checked> 1</label>
-        <label><input type="radio" name="boxes" value="2"> 2</label>
-        <label><input type="radio" name="boxes" value="3"> 3</label>
-      </fieldset>
-      <dl class="facts">
-        <dt>בכל קופסה</dt><dd>10 שקיות, 12 גרם בכל אחת</dd>
-        <dt>מחיר</dt><dd><span class="todo">מחיר לקופסה במנוי</span></dd>
-        <dt>משלוח</dt><dd><span class="todo">ימים ועלות</span></dd>
-      </dl>
-      <div class="buy"><button class="add" type="button">להצטרף למנוי</button></div>
-    </div>
-  </div>
+  <p class="subtext">בתי קלייה בארץ עושים דברים נהדרים. אנחנו טועמים ובוחרים, ואתם יכולים להכיר את הקפה שלהם כוס בכל פעם. בלי להתחייב לשקית פולים שלמה, בלי מטחנה ובלי ציוד מיוחד.</p>
+</div></section>
+<section id="plans"><div class="in">
+  <div class="head"><h2>מכירים את הטעם שלכם, או שבא לכם לגלות?</h2></div>
+  <fieldset class="plans"><legend class="sr-only">מסלול</legend>
+    <label class="plan"><input type="radio" name="plan" value="one" checked>
+      <h3>מצאנו אחד.</h3><span class="kind">קפה קבוע</span>
+      <p>הקפה שאהבתם, שוב אצלכם. 10 דריפ באגז מאותו סוג בכל חודש, לרגעים שבהם אתם יודעים בדיוק מה בא לכם.</p></label>
+    <label class="plan"><input type="radio" name="plan" value="mix">
+      <h3>עוד לא החלטנו.</h3><span class="kind">מארז מגוון</span>
+      <p>חמישה סוגי קפה, שתי שקיות מכל אחד. לטעום זה לצד זה, לחזור לעוד כוס ולגלות מה הכי אהבתם.</p></label>
+    <label class="plan"><input type="radio" name="plan" value="pick">
+      <h3>תבחרו לנו.</h3><span class="kind">בחירה חודשית שלנו</span>
+      <p>בכל חודש נבחר בשבילכם קפה אחר. אתם תגלו מה הגיע כשתפתחו את החבילה.</p></label>
+  </fieldset>
 </div></section>
 <section><div class="in">
-  <div class="head"><h2>שלוש דרכים</h2></div>
-  <div class="tips">
-    <div class="tip"><h3>קפה אחד</h3><p>מצאתם את הקפה שלכם? כל חודש 10 שקיות ממנו.</p></div>
-    <div class="tip"><h3>מיקס</h3><p>5 סוגים, 2 שקיות מכל אחד. לטעום הכל.</p></div>
-    <div class="tip"><h3>הפתעה</h3><p>כל חודש אנחנו בוחרים בשבילכם קפה אחר.</p></div>
-  </div>
-</div></section>
-<section><div class="in">
-  <div class="head"><h2>שאלות</h2></div>
-  <div class="faq">
-    <details><summary>מתי הקופסה מגיעה?</summary><p><span class="todo">תשובה ממך</span></p></details>
-    <details><summary>אפשר לעצור או לבטל?</summary><p><span class="todo">תשובה ממך</span></p></details>
-    <details><summary>אפשר להחליף קפה באמצע?</summary><p><span class="todo">תשובה ממך</span></p></details>
+  <div class="pinfo" style="max-width:560px">
+    <h2>כמה מארזים בחודש</h2>
+    <fieldset class="opts"><legend class="sr-only">כמה מארזים בחודש</legend>
+      <label><input type="radio" name="boxes" value="1" checked> 1</label>
+      <label><input type="radio" name="boxes" value="2"> 2</label>
+      <label><input type="radio" name="boxes" value="3"> 3</label>
+    </fieldset>
+    <dl class="facts">
+      <dt>בכל מארז</dt><dd>10 דריפ באגז, 12 גרם בכל אחד</dd>
+      <dt>מחיר</dt><dd><span class="todo">מחיר למארז במנוי</span></dd>
+      <dt>משלוח</dt><dd><span class="todo">ימים ועלות</span></dd>
+      <dt>עצירה וביטול</dt><dd><span class="todo">תנאים</span></dd>
+    </dl>
+    <div class="buy"><button class="add" type="button">זה המנוי שלי</button></div>
   </div>
 </div></section>''')
