@@ -11,7 +11,7 @@
   });});
   var f=document.getElementById('bizform');
   if(f)f.addEventListener('submit',function(e){
-    e.preventDefault();document.getElementById('formmsg').textContent='זו טיוטה, הטופס עוד לא שולח. באתר האמיתי הפנייה תגיע אליך למייל.';
+    e.preventDefault();document.getElementById('formmsg').textContent='זו גרסת בדיקה. הטופס עוד לא שולח.';
   });
   document.querySelectorAll('[data-filter]').forEach(function(c){c.addEventListener('click',function(){
     var v=c.getAttribute('data-filter');

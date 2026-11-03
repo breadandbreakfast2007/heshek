@@ -242,3 +242,8 @@ footer small{color:var(--ink-soft)}
 .works img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius,16px);display:block}
 .works figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
 @media(min-width:760px){.works{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}}
+.routes{display:grid;gap:14px;margin-block:0 28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.route{background:var(--paper);border-radius:var(--r);padding:18px 20px;min-width:0}
+.route h3{font-size:1.35rem;margin-block:6px}
+.route p{color:var(--ink-soft)}
+.sub[dir=ltr],dd[dir=ltr]{text-align:right}
