@@ -45,7 +45,7 @@ LAYOUT='''<!doctype html>
   <div class="in">
     <a class="logo" href="index.html"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     <nav aria-label="תחתון">{fnav}<a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
-    <small><span class="todo">שם החברה, ח.פ. וכתובת</span></small>
+    <small>ברד אנד ברקפסט בע״מ · ח.פ. 513969154 · <span class="todo">כתובת</span></small>
   </div>
 </footer>
 
