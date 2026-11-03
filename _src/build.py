@@ -45,7 +45,7 @@ LAYOUT='''<!doctype html>
   <div class="in">
     <a class="logo" href="index.html"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
     <nav aria-label="תחתון">{fnav}<a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
-    <small>ברד אנד ברקפסט בע״מ · ח.פ. 513969154 · <span class="todo">כתובת</span></small>
+    <small>ברד אנד ברקפסט בע״מ · ח.פ. 513969154 · ז׳בוטינסקי 3, רעננה</small>
   </div>
 </footer>
 
@@ -215,7 +215,6 @@ page('contact.html','צרו קשר | חשק','איך מגיעים לחשק.','''
 </div></div>
 <section><div class="in contact">
   <div class="ways">
-    <div class="way"><span class="label">וואטסאפ</span><b><span class="todo">מספר</span></b></div>
     <div class="way"><span class="label">מייל</span><b><span class="todo">כתובת מייל</span></b></div>
     <div class="way"><span class="label">אינסטגרם</span><b><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener" dir="ltr">@heshek.coffee</a></b></div>
     <div class="way"><span class="label">לעסקים ואירועים</span><b><a href="business.html">לבקשת הצעת מחיר</a></b></div>
