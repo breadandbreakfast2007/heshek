@@ -121,7 +121,7 @@ home_cups='''<section class="vidhero" aria-label="כוסות Fressko">
     <span class="todo">סרטון: מחכה לקובץ מ־Fressko</span>
     <div class="label">חדש בחשק</div>
     <h2>כוסות Fressko</h2>
-    <p>ציפוי קרמי בפנים. שני גדלים, חמישה צבעים.</p>
+    <p>ציפוי קרמי בפנים. שני גדלים, 12 צבעים.</p>
     <div class="btns"><a class="btn" href="cups.html#bino">Bino · 230 מ״ל</a><a class="btn alt" href="cups.html#camino">Camino · 340 מ״ל</a></div>
   </div>
 </section>'''
