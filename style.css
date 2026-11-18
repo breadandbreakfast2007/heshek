@@ -389,16 +389,6 @@ body:has(.hero.onyx) header nav,body:has(.hero.onyx) header .logo{opacity:0;anim
 .comicpanel{max-width:560px;margin:0 auto 28px;position:relative}
 .comicpanel img{width:100%;border-radius:var(--r);display:block}
 @media (prefers-reduced-motion:reduce){.hero.onyx .mark,.hero.onyx .intro-text,.scrollcue,body:has(.hero.onyx) header nav,body:has(.hero.onyx) header .logo{animation:none;opacity:1}}
-/* home: dark header so the opening is one dark screen */
-body:has(.hero.onyx) header{background:var(--ink);color:var(--paper);border-bottom-color:rgba(255,255,255,.08)}
-body:has(.hero.onyx) header .logo img{filter:brightness(0) invert(.96) sepia(.12)}
-body:has(.hero.onyx) header .menu-btn,body:has(.hero.onyx) header .cart{color:var(--paper)}
-body:has(.hero.onyx) header nav a{color:var(--paper)}
-body:has(.hero.onyx) header nav a:hover{border-bottom-color:var(--paper)}
-body:has(.hero.onyx) .chips{background:var(--ink);border-top-color:rgba(255,255,255,.08)}
-body:has(.hero.onyx) .chips a{background:transparent;color:var(--paper);border-color:rgba(255,255,255,.55)}
-body:has(.hero.onyx) #mnav{background:var(--ink)}
-body:has(.hero.onyx) #mnav a{color:var(--paper);border-bottom-color:rgba(255,255,255,.12)}
 body:has(.hero.onyx) header{border-bottom:0;box-shadow:none}.hero.onyx{border:0;margin-top:0}
 .hero.onyx{min-height:calc(100svh - var(--hdr,150px) + 18vh)}
 .hero.onyx .in{padding-block:0 18vh;align-self:center}
