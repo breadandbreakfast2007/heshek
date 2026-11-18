@@ -77,7 +77,7 @@ cups=part('cups'); how=part('how'); where=part('where'); biz=part('biz'); story=
 
 # ---------- home ----------
 home_shop=shop.replace('<div class="grid">','<div class="grid rail">').replace('</div>\n  </div>\n</section>','</div>\n    <p class="more"><a class="btn alt" href="shop.html">לכל המוצרים</a></p>\n  </div>\n</section>')
-home_how=how.replace('<p class="note">בכל שקית 12 גרם קפה.</p>','<p class="more"><a class="btn alt" href="how.html">עוד על ההכנה</a></p>')
+home_how=how.replace('</div>\n    <div class="steps">','</div>\n    <div class="panel comicpanel"><span class="todo pin">איור AI, לגרסה סופית</span><img src="img/comic.jpg" alt="קומיקס: קורעים, תולים, מוזגים, בלי דרמה" loading="lazy"></div>\n    <div class="steps">',1).replace('<p class="note">בכל שקית 12 גרם קפה.</p>','<p class="more"><a class="btn alt" href="how.html">עוד על ההכנה</a></p>')
 ticker=re.search(r'<div class="ticker".*?</div></div>',biz,re.S).group(0)
 floaty=re.search(r'<div class="ph floaty">.*?</div>',biz,re.S).group(0)
 leadform=re.search(r'    <form id="bizform".*?</form>',biz,re.S).group(0)

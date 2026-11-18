@@ -66,3 +66,7 @@
   v.addEventListener('timeupdate',function(){var t=v.currentTime,txt='';for(var i=0;i<C.length;i++)if(t>=C[i][0]&&t<C[i][1])txt=C[i][2];
     if(txt!==cur){cur=txt;if(txt){s.textContent=txt;c.classList.add('on')}else c.classList.remove('on')}});
 })();
+
+(function(){var h=document.querySelector('.hero.onyx');if(!h)return;
+  function set(){var t=h.getBoundingClientRect().top+window.scrollY;document.documentElement.style.setProperty('--hdr',t+'px');}
+  set();window.addEventListener('resize',set);})();
