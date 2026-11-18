@@ -322,7 +322,8 @@ header nav a{white-space:nowrap}
 .vidhero.light .btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
 .vidhero.light .btn.alt:hover{background:var(--ink);color:var(--paper)}
 .vidhero.light .in{align-self:center}
-.vcap{position:absolute;left:50%;transform:translateX(-50%);bottom:28px;white-space:nowrap;margin:0;z-index:2;pointer-events:none}
-.vcap span{display:inline-block;background:var(--ink);color:var(--paper);font-weight:600;font-size:1.05rem;padding:8px 16px;border-radius:999px;opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s}
-.vcap.on span{opacity:1;transform:none}
-@media(max-width:720px){.vidhero.light{min-height:auto;display:block}.vidhero.light video{position:relative;height:auto;aspect-ratio:16/9}.vidhero.light .veil{display:none}.vidhero.light .in{padding-block:24px 40px;background:var(--paper)}.vcap{left:50%;transform:translateX(-50%);top:calc(56.25vw - 52px);bottom:auto;white-space:nowrap}}
+@media(max-width:720px){.vidhero.light{min-height:auto;display:block}.vidhero.light video{position:relative;height:auto;aspect-ratio:16/9}.vidhero.light .veil{display:none}.vidhero.light .in{padding-block:24px 40px;background:var(--paper)}}
+.vidhero .vcap{margin:2px 0 6px;min-height:1.6em;border-inline-start:3px solid var(--ink);padding-inline-start:12px;font-size:1.15rem;font-weight:600;color:var(--ink)}
+.vidhero .vcap span{display:inline-block;opacity:0;transform:translateY(4px);transition:opacity .4s,transform .4s}
+.vidhero .vcap.on span{opacity:1;transform:none}
+.vidhero.light h2{font-size:clamp(2.4rem,6vw,3.8rem)}
