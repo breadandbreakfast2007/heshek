@@ -53,3 +53,10 @@
     var c=document.getElementById('cup');if(c)c.scrollIntoView({block:'start'});}}
   window.addEventListener('hashchange',fromHash);fromHash();render();
 })();
+(function(){
+  var v=document.querySelector('.vidhero.light video'),c=document.querySelector('.vcap');if(!v||!c)return;
+  var s=c.querySelector('span'),cur='';
+  var C=[[3.0,4.8,'זוכת פרסים · עוצבה באוסטרליה'],[6.3,8.4,'שומרת חום יותר מ־3 שעות'],[8.8,10.6,'לא נוזלת. בכלל.'],[12.5,14.2,'פשוט כוס הקפה הרב־פעמית הכי טובה בעולם']];
+  v.addEventListener('timeupdate',function(){var t=v.currentTime,txt='';for(var i=0;i<C.length;i++)if(t>=C[i][0]&&t<C[i][1])txt=C[i][2];
+    if(txt!==cur){cur=txt;if(txt){s.textContent=txt;c.classList.add('on')}else c.classList.remove('on')}});
+})();
