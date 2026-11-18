@@ -32,7 +32,7 @@
 })();
 (function(){
   var img=document.getElementById('cupImg');if(!img)return;
-  var P={bino:{name:'Bino',vol:'230 מ״ל',cup:129,sleeve:79},camino:{name:'Camino',vol:'340 מ״ל',cup:149,sleeve:79}};
+  var P={bino:{name:'Bino',vol:'230 מ״ל',cup:109,sleeve:60},camino:{name:'Camino',vol:'340 מ״ל',cup:129,sleeve:60}};
   var size='bino',color='oat';
   var $=function(id){return document.getElementById(id);};
   function render(){
