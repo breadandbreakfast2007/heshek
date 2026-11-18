@@ -52,6 +52,8 @@
   function fromHash(){var h=location.hash.replace('#','');if(P[h]){size=h;var r=document.querySelector('input[name=cupsize][value='+h+']');if(r)r.checked=true;render();
     var c=document.getElementById('cup');if(c)setTimeout(function(){c.scrollIntoView({block:'start'});},30);}}
   window.addEventListener('hashchange',fromHash);fromHash();render();
+  document.querySelectorAll('a[href="#bino"],a[href="#camino"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();
+    var h=a.getAttribute('href');if(location.hash!==h)history.replaceState(null,'',h);fromHash();});});
 })();
 (function(){
   var v=document.querySelector('.vidhero.light video'),c=document.querySelector('.vcap');if(!v||!c)return;
