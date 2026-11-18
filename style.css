@@ -400,3 +400,5 @@ body:has(.hero.onyx) .chips a{background:transparent;color:var(--paper);border-c
 body:has(.hero.onyx) #mnav{background:var(--ink)}
 body:has(.hero.onyx) #mnav a{color:var(--paper);border-bottom-color:rgba(255,255,255,.12)}
 body:has(.hero.onyx) header{border-bottom:0;box-shadow:none}.hero.onyx{border:0;margin-top:0}
+.hero.onyx{min-height:calc(100svh - var(--hdr,150px) + 18vh)}
+.hero.onyx .in{padding-block:0 18vh;align-self:center}

@@ -16,7 +16,7 @@ LAYOUT='''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700&family=Karantina:wght@700&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={ver}">
 </head>
 <body>
 <div class="wrap">
@@ -51,16 +51,20 @@ LAYOUT='''<!doctype html>
 </footer>
 
 </div>
-<script src="site.js"></script>
+<script src="site.js?v={ver}"></script>
 </body>
 </html>
 '''
+import hashlib,os
+_R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+VER=hashlib.md5((open(os.path.join(_R,'style.css'),'rb').read()+open(os.path.join(_R,'site.js'),'rb').read())).hexdigest()[:8]
+
 def chips(active):
     L=[('shop.html','דריפ באגז')]+[x for x in NAV if x[0]!='shop.html']
     return ''.join('<a href="%s"%s>%s</a>'%(h,' aria-current="page"' if h==active else '',t) for h,t in L)
 
 def page(fn,title,desc,body,active=None):
-    html=LAYOUT.format(title=title,desc=desc,body=body,nav=nav(active),fnav=nav(None),chips=chips(active))
+    html=LAYOUT.format(title=title,desc=desc,body=body,nav=nav(active),fnav=nav(None),chips=chips(active),ver=VER)
     open(os.path.join(R,'..',fn),'w',encoding='utf-8').write(html)
 
 def L(s):  # in-page anchors -> pages
