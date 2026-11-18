@@ -50,7 +50,7 @@
   });});
   $('sleeve').addEventListener('change',render);
   function fromHash(){var h=location.hash.replace('#','');if(P[h]){size=h;var r=document.querySelector('input[name=cupsize][value='+h+']');if(r)r.checked=true;render();
-    var c=document.getElementById('cup');if(c)c.scrollIntoView({block:'start'});}}
+    var c=document.getElementById('cup');if(c)setTimeout(function(){c.scrollIntoView({block:'start'});},30);}}
   window.addEventListener('hashchange',fromHash);fromHash();render();
 })();
 (function(){
