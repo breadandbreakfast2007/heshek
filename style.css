@@ -328,6 +328,7 @@ header nav a{white-space:nowrap}
 .vidhero .vcap.on span{opacity:1;transform:none}
 .vidhero.light h2{font-size:clamp(2.4rem,6vw,3.8rem)}
 #cup{scroll-margin-top:84px}
+@media(max-width:1079px){#cup{scroll-margin-top:146px}}
 .opts.sizes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .opts.sizes label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:10px 12px;border-radius:14px;white-space:normal;text-align:center;line-height:1.2}
 .opts.sizes label{position:relative}
@@ -336,7 +337,7 @@ header nav a{white-space:nowrap}
 .opts.sizes label span{font-weight:400;font-size:.92rem;color:color-mix(in srgb,var(--ink) 75%,transparent)}
 .opts.sizes label:has(input:focus-visible){outline:2px solid var(--ink);outline-offset:2px}
 @media(max-width:720px){
-  #cup{scroll-margin-top:72px}
+  #cup{scroll-margin-top:146px}
   #cup>.in{padding-top:8px}
   .cupx .gallery .main.pack img{aspect-ratio:auto;height:34vh;padding:4%}
   .cupx .pinfo h1{font-size:2rem;margin:0}
@@ -352,3 +353,22 @@ header nav a{white-space:nowrap}
 .boxes .box img{width:100%;aspect-ratio:1;object-fit:contain}
 .boxes .box:hover{outline:2px solid var(--ink)}
 @media(max-width:720px){.boxes{grid-template-columns:1fr 1fr;gap:10px}}
+/* mobile menu: one clean column */
+header #mnav .in{display:flex;flex-direction:column;align-items:stretch;gap:0;padding-block:8px 14px}
+header #mnav a{padding:12px 0;border-bottom:1px solid var(--line);text-align:start}
+header #mnav a:last-child{border-bottom:0}
+/* quick chips (mobile/tablet, where top nav is hidden) */
+.chips{border-top:1px solid var(--line);background:var(--paper)}
+.chips .track{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+.chips .track::-webkit-scrollbar{display:none}
+.chips a{flex:0 0 auto;scroll-snap-align:start;text-decoration:none;font-weight:600;font-size:.98rem;padding:8px 16px;border:1.5px solid var(--ink);border-radius:999px;color:var(--ink);background:var(--paper);white-space:nowrap}
+.chips a[aria-current="page"]{background:var(--ink);color:var(--paper)}
+@media (min-width:1080px){.chips{display:none}}
+/* home intro */
+.hero.intro .in{padding-block:22px 40px}
+.intro-text{font-size:1.12rem;line-height:1.65;margin:0 0 12px;max-width:52ch}
+.hero .sign{font-family:var(--f-display);font-size:1.5rem;margin:14px 0 0}
+@media (min-width:860px){.intro-text{font-size:1.2rem}}
+header nav.chips{display:block;margin:0;gap:0}
+header nav.chips a{border-bottom-width:1.5px;padding-block:8px}
+@media (min-width:1080px){header nav.chips{display:none}}

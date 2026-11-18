@@ -35,6 +35,7 @@ LAYOUT='''<!doctype html>
     </div>
   </div>
   <div id="mnav" hidden><div class="in">{nav}</div></div>
+  <nav class="chips" aria-label="קיצורי דרך"><div class="track">{chips}</div></nav>
 </header>
 
 <main id="top">
@@ -54,8 +55,12 @@ LAYOUT='''<!doctype html>
 </body>
 </html>
 '''
+def chips(active):
+    L=[('shop.html','דריפ באגז')]+[x for x in NAV if x[0]!='shop.html']
+    return ''.join('<a href="%s"%s>%s</a>'%(h,' aria-current="page"' if h==active else '',t) for h,t in L)
+
 def page(fn,title,desc,body,active=None):
-    html=LAYOUT.format(title=title,desc=desc,body=body,nav=nav(active),fnav=nav(None))
+    html=LAYOUT.format(title=title,desc=desc,body=body,nav=nav(active),fnav=nav(None),chips=chips(active))
     open(os.path.join(R,'..',fn),'w',encoding='utf-8').write(html)
 
 def L(s):  # in-page anchors -> pages
