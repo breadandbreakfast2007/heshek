@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>כוסות | חשק</title>
+<meta name="description" content="כוסות Fressko עם ציפוי קרמי: Bino ו־Camino.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700&family=Karantina:wght@700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<div class="draftbar"><div class="in">טיוטה לעיון. מה שמסומן ב<span class="todo" style="font-size:.75rem">להחלפה</span> מחכה לחומרים או לפרטים.</div></div>
+
+<header>
+  <div class="in">
+    <div class="hdr-start">
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="תפריט"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></button>
+      <nav aria-label="ראשי"><a href="shop.html">חנות</a><a href="cups.html" aria-current="page">כוסות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a></nav>
+    </div>
+    <a class="logo" href="index.html" aria-label="חשק, חברה של קפה, לעמוד הבית"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
+    <div class="hdr-end">
+      <button class="cart" id="cart" type="button" aria-label="סל קניות"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span id="count" class="badge">0</span></button>
+    </div>
+  </div>
+  <div id="mnav" hidden><div class="in"><a href="shop.html">חנות</a><a href="cups.html" aria-current="page">כוסות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a></div></div>
+</header>
+
+<main id="top">
+<div class="pagehead sky"><div class="in">
+  <div class="label">כוסות</div>
+  <h1>כוסות Fressko</h1>
+  <p>כוס תרמית עם ציפוי קרמי בפנים, בשני גדלים.</p>
+</div></div>
+<section id="cup"><div class="in">
+  <div class="product cupx">
+    <div class="gallery">
+      <div class="main pack"><img id="cupImg" src="img/cups/bino-oat.webp" alt="כוס Fressko Bino בצבע Oat"></div>
+      <img class="thumb" src="img/cups/life-peachy.jpg" alt="כוס Camino בצבע Peachy בחוף" loading="lazy">
+      <img class="thumb" src="img/cups/life-breezy.jpg" alt="כוס Bino בצבע Breezy ביד" loading="lazy">
+      <img class="thumb" src="img/cups/sleeve-oat.jpg" alt="כוס עם שרוול עור" loading="lazy">
+    </div>
+    <div class="pinfo">
+      <div class="label" dir="ltr" style="text-align:right">made by Fressko</div>
+      <h1 id="cupName">Bino</h1>
+      <p class="sub" id="cupSub">230 מ״ל · ציפוי קרמי פנימי</p>
+      <fieldset class="opts"><legend class="sr-only">גודל</legend>
+        <label id="bino"><input type="radio" name="cupsize" value="bino" checked> Bino · 230 מ״ל</label>
+        <label id="camino"><input type="radio" name="cupsize" value="camino"> Camino · 340 מ״ל</label>
+      </fieldset>
+      <div>
+        <p class="optlabel">צבע: <b id="colorName">Oat</b></p>
+        <div class="swatches" role="radiogroup" aria-label="צבע">
+          <button type="button" role="radio" aria-checked="true" data-color="oat" data-name="Oat" style="--c:#d8cbb8" aria-label="Oat"></button>
+          <button type="button" role="radio" aria-checked="false" data-color="coal" data-name="Coal" style="--c:#3e3e3e" aria-label="Coal"></button>
+          <button type="button" role="radio" aria-checked="false" data-color="peachy" data-name="Peachy" style="--c:#eba69b" aria-label="Peachy"></button>
+          <button type="button" role="radio" aria-checked="false" data-color="breezy" data-name="Breezy" style="--c:#a9d8d2" aria-label="Breezy"></button>
+          <button type="button" role="radio" aria-checked="false" data-color="limoncello" data-name="Limoncello" style="--c:#ecdc90" aria-label="Limoncello"></button>
+        </div>
+      </div>
+      <label class="addon"><input type="checkbox" id="sleeve"> <span>להוסיף שרוול עור איטלקי <b>+₪<span id="sleevePrice">69</span></b></span></label>
+      <p class="addon-note"><span class="todo">צבע השרוול: להשלים</span></p>
+      <div class="buy">
+        <span class="price big">₪<span id="cupTotal">89</span></span>
+        <div class="qty"><button type="button" data-step="1" aria-label="עוד אחד">+</button><input id="qty" value="1" inputmode="numeric" aria-label="כמות"><button type="button" data-step="-1" aria-label="אחד פחות">−</button></div>
+        <button class="add" type="button">הוספה לסל</button>
+      </div>
+      <dl class="facts">
+        <dt>נפח</dt><dd id="factVol">230 מ״ל</dd>
+        <dt>בפנים</dt><dd>ציפוי קרמי</dd>
+        <dt>מכסה</dt><dd>נסגר בקליק</dd>
+        <dt>נכנסת</dt><dd>מתחת למכונת אספרסו ולמחזיק כוס ברכב</dd>
+        <dt>שמירת חום</dt><dd><span class="todo">לאמת מול המפרט של Fressko</span></dd>
+      </dl>
+      <p><span class="todo">משלוח: זמנים ועלות</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="bundle"><div class="in">
+  <div class="head"><h2>כוס וקפה, ביחד</h2><p>כוס לבחירה עם קופסה של 10 דריפ באגז.</p></div>
+  <div class="bundles">
+    <article class="bundle">
+      <div class="ph"><img src="img/cups/bino-breezy.webp" alt="כוס Bino" loading="lazy"><img src="img/products/indonesia.jpg" alt="קופסת דריפ באגז" loading="lazy"></div>
+      <div class="body"><h3>Bino + קופסת דריפ באגז</h3><p class="price">₪149 <small><s>₪164</s></small></p><a class="btn alt" href="#bino">לבחירת צבע</a></div>
+    </article>
+    <article class="bundle">
+      <div class="ph"><img src="img/cups/camino-peachy.webp" alt="כוס Camino" loading="lazy"><img src="img/products/ethiopia.jpg" alt="קופסת דריפ באגז" loading="lazy"></div>
+      <div class="body"><h3>Camino + קופסת דריפ באגז</h3><p class="price">₪159 <small><s>₪174</s></small></p><a class="btn alt" href="#camino">לבחירת צבע</a></div>
+    </article>
+  </div>
+  <p class="note"><span class="todo">איך בוחרים את הקפה למארז: להשלים</span></p>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="in">
+    <a class="logo" href="index.html"><img src="img/logo.svg" alt="חשק, חברה של קפה"></a>
+    <nav aria-label="תחתון"><a href="shop.html">חנות</a><a href="cups.html">כוסות</a><a href="how.html">איך מכינים</a><a href="business.html">לעסקים ואירועים</a><a href="story.html">הסיפור</a><a href="contact.html">צרו קשר</a><a href="#">תקנון</a><a href="#">משלוחים והחזרות</a><a href="https://www.instagram.com/heshek.coffee/" target="_blank" rel="noopener">אינסטגרם</a></nav>
+    <small>ברד אנד ברקפסט בע״מ · ח.פ. 513969154 · ז׳בוטינסקי 3, רעננה</small>
+  </div>
+</footer>
+
+</div>
+<script src="site.js"></script>
+</body>
+</html>

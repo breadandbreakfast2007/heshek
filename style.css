@@ -277,3 +277,39 @@ footer small{color:var(--ink-soft)}
 .roasters .big{color:var(--ink)}
 .roasters .nos{font-size:.95rem;border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
 section.tight{border-top:0}section.tight > .in{padding-block:8px 32px}
+
+/* ---------- cups (Fressko) ---------- */
+.vidhero{position:relative;overflow:hidden;min-height:min(82vh,720px);display:grid;align-items:end;border-top:0;background:var(--ink)}
+.vidhero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vidhero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,14,8,.62),rgba(30,14,8,.08) 55%)}
+.vidhero .in{position:relative;padding-block:56px;display:grid;gap:10px;justify-items:start;color:var(--paper);width:100%}
+.vidhero h2{font-size:clamp(2.6rem,8vw,4.6rem)}
+.vidhero p{font-size:1.2rem;max-width:32ch}
+.vidhero .label{color:color-mix(in srgb,var(--paper) 80%,transparent)}
+.vidhero .btn{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.vidhero .btn:hover{background:transparent;color:var(--paper)}
+.vidhero .btn.alt{background:transparent;color:var(--paper);border-color:var(--paper)}
+.vidhero .btn.alt:hover{background:var(--paper);color:var(--ink)}
+.cupx .gallery .main.pack{background:var(--sand)}
+.cupx .gallery .main.pack img{object-fit:contain;padding:6%;transition:opacity .25s}
+.optlabel{margin:0 0 8px;font-weight:600}
+.swatches{display:flex;gap:10px;flex-wrap:wrap}
+.swatches button{width:38px;height:38px;border-radius:50%;background:var(--c);border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line);cursor:pointer;padding:0}
+.swatches button[aria-checked="true"]{box-shadow:0 0 0 2px var(--ink)}
+.addon{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;cursor:pointer}
+.addon:has(input:checked){border-color:var(--ink);background:var(--sand)}
+.addon input{accent-color:var(--ink);width:18px;height:18px}
+.addon-note{margin:-6px 0 0}
+.price.big{font-size:1.6rem;font-family:var(--f-display);font-weight:400}
+.bundles{display:grid;gap:20px}
+@media (min-width:760px){.bundles{grid-template-columns:1fr 1fr}}
+.bundle{display:grid;gap:12px}
+.bundle .ph{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bundle .ph img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r);background:var(--sand)}
+.bundle .ph img:first-child{object-fit:contain;padding:8%}
+.bundle .body{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.bundle h3{font-size:1.3rem;flex-basis:100%}
+.bundle s{color:var(--ink-soft)}
+
+header nav a{white-space:nowrap}
+@media(min-width:900px){header nav{gap:18px}}

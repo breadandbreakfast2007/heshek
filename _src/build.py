@@ -2,7 +2,7 @@
 import os,re
 R=os.path.dirname(os.path.abspath(__file__))
 def part(n): return open(os.path.join(R,'parts_%s.html'%n),encoding='utf-8').read()
-NAV=[('shop.html','חנות'),('how.html','איך מכינים'),('business.html','לעסקים ואירועים'),('story.html','הסיפור'),('contact.html','צרו קשר')]
+NAV=[('shop.html','חנות'),('cups.html','כוסות'),('how.html','איך מכינים'),('business.html','לעסקים ואירועים'),('story.html','הסיפור'),('contact.html','צרו קשר')]
 def nav(active):
     return ''.join('<a href="%s"%s>%s</a>'%(h,' aria-current="page"' if h==active else '',t) for h,t in NAV)
 LAYOUT='''<!doctype html>
@@ -68,7 +68,7 @@ cards=re.findall(r'<article class="card.*?</article>',shop,re.S)
 # product links
 cats=['drip']*7+['ground','soon']
 cards_c=[c.replace('<article class="card','<article data-cat="%s" class="card'%k,1) for c,k in zip(cards,cats)]
-how=part('how'); where=part('where'); biz=part('biz'); story=part('story'); insta=part('insta')
+cups=part('cups'); how=part('how'); where=part('where'); biz=part('biz'); story=part('story'); insta=part('insta')
 
 # ---------- home ----------
 home_shop=shop.replace('<div class="grid">','<div class="grid rail">').replace('</div>\n  </div>\n</section>','</div>\n    <p class="more"><a class="btn alt" href="shop.html">לכל המוצרים</a></p>\n  </div>\n</section>')
@@ -114,8 +114,19 @@ home_story='''<section id="story" class="story">
     </div>
   </div>
 </section>'''
+home_cups='''<section class="vidhero" aria-label="כוסות Fressko">
+  <video autoplay muted loop playsinline preload="metadata" poster="img/cups/life-breezy.jpg"><source src="img/cups/cups-loop.mp4" type="video/mp4"></video>
+  <div class="veil"></div>
+  <div class="in">
+    <span class="todo">סרטון: מחכה לקובץ מ־Fressko</span>
+    <div class="label">חדש בחשק</div>
+    <h2>כוסות Fressko</h2>
+    <p>ציפוי קרמי בפנים. שני גדלים, חמישה צבעים.</p>
+    <div class="btns"><a class="btn" href="cups.html#bino">Bino · 230 מ״ל</a><a class="btn alt" href="cups.html#camino">Camino · 340 מ״ל</a></div>
+  </div>
+</section>'''
 page('index.html','חשק, חברה של קפה','דריפ באגז של חשק. קורעים, תולים, מוזגים.',
-     '\n\n'.join([hero,home_shop,home_how,where,home_biz,home_story,insta]))
+     '\n\n'.join([hero,home_shop,home_cups,home_how,where,home_biz,home_story,insta]))
 
 # ---------- shop ----------
 page('shop.html','חנות | חשק','דריפ באגז, קפה ומארזים של חשק.','''<div class="pagehead sun"><div class="in">
@@ -176,6 +187,14 @@ page('product.html','אינדונזיה | חשק','דריפ באגז אינדו�
     </div>
   </div>
 </div></section>''')
+
+# ---------- cups ----------
+page('cups.html','כוסות | חשק','כוסות Fressko עם ציפוי קרמי: Bino ו־Camino.','''<div class="pagehead sky"><div class="in">
+  <div class="label">כוסות</div>
+  <h1>כוסות Fressko</h1>
+  <p>כוס תרמית עם ציפוי קרמי בפנים, בשני גדלים.</p>
+</div></div>
+'''+cups,'cups.html')
 
 # ---------- how ----------
 how_page=how.replace('<h2>איך מכינים</h2>','<h2>שלושה צעדים</h2>')
