@@ -52,13 +52,17 @@
   function fromHash(){var h=location.hash.replace('#','');if(P[h]){size=h;var r=document.querySelector('input[name=cupsize][value='+h+']');if(r)r.checked=true;render();
     var c=document.getElementById('cup');if(c)setTimeout(function(){c.scrollIntoView({block:'start'});},30);}}
   window.addEventListener('hashchange',fromHash);fromHash();render();
+  document.querySelectorAll('.boxes .box').forEach(function(bx){bx.addEventListener('click',function(){
+    size=bx.getAttribute('data-size');var r=document.querySelector('input[name=cupsize][value='+size+']');if(r)r.checked=true;
+    var sw=document.querySelector('.swatches [data-color='+bx.getAttribute('data-color')+']');if(sw)sw.click();else render();
+    document.getElementById('cup').scrollIntoView({behavior:'smooth',block:'start'});});});
   document.querySelectorAll('a[href="#bino"],a[href="#camino"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();
     var h=a.getAttribute('href');if(location.hash!==h)history.replaceState(null,'',h);fromHash();});});
 })();
 (function(){
   var v=document.querySelector('.vidhero.light video'),c=document.querySelector('.vcap');if(!v||!c)return;
   var s=c.querySelector('span'),cur='';
-  var C=[[3.0,4.8,'זוכת פרסים · עוצבה באוסטרליה'],[6.3,8.4,'שומרת חום יותר מ־3 שעות'],[8.8,10.6,'לא נוזלת. בכלל.'],[12.5,14.2,'פשוט כוס הקפה הרב־פעמית הכי טובה בעולם']];
+  var C=[[3.0,4.8,'זוכת פרסים · עוצבה באוסטרליה'],[6.3,8.4,'שומרת חום עד 3 שעות'],[8.8,10.6,'לא נוזלת. בכלל.'],[12.5,14.2,'פשוט כוס הקפה הרב־פעמית הכי טובה בעולם']];
   v.addEventListener('timeupdate',function(){var t=v.currentTime,txt='';for(var i=0;i<C.length;i++)if(t>=C[i][0]&&t<C[i][1])txt=C[i][2];
     if(txt!==cur){cur=txt;if(txt){s.textContent=txt;c.classList.add('on')}else c.classList.remove('on')}});
 })();
